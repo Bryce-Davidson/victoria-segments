@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 import "mapbox-gl/dist/mapbox-gl.css";
-import Map, { Marker, FullscreenControl, Source, Layer } from "react-map-gl";
+import Map, { FullscreenControl, Source, Layer, MapRef } from "react-map-gl";
 import { MAPBOX_PUBLIC_TOKEN } from "../utils/mapbox/tokens";
 import json from "../data/tracks.json";
+import { useRef } from "react";
 
-console.log(json);
+const geo: any = json;
 
-const layerStyle = {
+const layerStyle: any = {
   id: "route",
   type: "line",
   source: "route",
@@ -20,22 +21,40 @@ const layerStyle = {
   },
 };
 
+function avgList(list: number[]) {
+  let sum = 0;
+}
+
+function centerPoint(geo: any) {
+  const coords = geo.features[0].geometry.coordinates[0];
+  const lats = coords.map((coord: any) => {
+    return coord[1];
+  });
+  const longs = coords.map((coord: any) => {
+    return coord[0];
+  });
+
+  const sumLats = lats.reduce((a: number, b: number) => a + b);
+  const sumLongs = longs.reduce((a: number, b: number) => a + b);
+
+  return {
+    latitude: sumLats / lats.length,
+    longitude: sumLongs / longs.length,
+    zoom: 14.5,
+  };
+}
+
 const Home: NextPage = () => {
   return (
     <div>
       <Map
-        initialViewState={{
-          latitude: 48.427589,
-          longitude: -123.3327,
-          zoom: 14,
-        }}
+        initialViewState={centerPoint(geo)}
         style={{ width: 800, height: 600 }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
       >
-        <Marker longitude={-123.3327} latitude={48.427589} color="red" />
         <FullscreenControl />
-        <Source id="my-data" type="geojson" data={json.features[0]}>
+        <Source id="my-data" type="geojson" data={geo}>
           <Layer {...layerStyle} />
         </Source>
       </Map>
