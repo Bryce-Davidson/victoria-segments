@@ -1,11 +1,10 @@
+import { MAPBOX_PUBLIC_TOKEN } from "../utils/mapbox/tokens";
 import type { NextPage } from "next";
+import { useRef } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Map, { FullscreenControl, Source, Layer, MapRef } from "react-map-gl";
-import { MAPBOX_PUBLIC_TOKEN } from "../utils/mapbox/tokens";
-import json from "../data/tracks.json";
-import { useRef } from "react";
-
-const geo: any = json;
+import bbox from "@turf/bbox";
+import downtown_walk_feature from "../data/tracks";
 
 const layerStyle: any = {
   id: "route",
@@ -21,40 +20,23 @@ const layerStyle: any = {
   },
 };
 
-function avgList(list: number[]) {
-  let sum = 0;
-}
-
-function centerPoint(geo: any) {
-  const coords = geo.features[0].geometry.coordinates[0];
-  const lats = coords.map((coord: any) => {
-    return coord[1];
-  });
-  const longs = coords.map((coord: any) => {
-    return coord[0];
-  });
-
-  const sumLats = lats.reduce((a: number, b: number) => a + b);
-  const sumLongs = longs.reduce((a: number, b: number) => a + b);
-
-  return {
-    latitude: sumLats / lats.length,
-    longitude: sumLongs / longs.length,
-    zoom: 14.5,
-  };
-}
-
 const Home: NextPage = () => {
+  const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);
   return (
     <div>
       <Map
-        initialViewState={centerPoint(geo)}
+        initialViewState={{
+          fitBoundsOptions: {
+            padding: { top: 100, bottom: 100, left: 100, right: 100 },
+          },
+          bounds: [minLng, minLat, maxLng, maxLat],
+        }}
         style={{ width: 800, height: 600 }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
       >
         <FullscreenControl />
-        <Source id="my-data" type="geojson" data={geo}>
+        <Source id="my-data" type="geojson" data={downtown_walk_feature}>
           <Layer {...layerStyle} />
         </Source>
       </Map>
