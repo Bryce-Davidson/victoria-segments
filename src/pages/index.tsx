@@ -1,6 +1,5 @@
 import { MAPBOX_PUBLIC_TOKEN } from "../utils/mapbox/tokens";
 import type { NextPage } from "next";
-import { useRef } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Map, { FullscreenControl, Source, Layer, MapRef } from "react-map-gl";
 import bbox from "@turf/bbox";
