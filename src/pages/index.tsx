@@ -62,13 +62,7 @@ const Home: NextPage = () => {
                 e.originalEvent.stopPropagation();
               }}
             >
-              {/* <Pin /> */}
-              <Image
-                alt="Oops"
-                width={150}
-                height={100}
-                src={"/photos/" + point?.properties?.photo_name}
-              />
+              <Pin />
             </Marker>
           );
         })}
@@ -78,23 +72,20 @@ const Home: NextPage = () => {
         {popupInfo && (
           <Popup
             anchor="top"
+            closeButton={false}
+            focusAfterOpen={true}
             longitude={Number(popupInfo.geometry.coordinates[0])}
             latitude={Number(popupInfo.geometry.coordinates[1])}
+            maxWidth="800px"
             onClose={() => setPopupInfo(null)}
           >
-            <div
-              style={{
-                width: "500px",
-                height: "300px",
-              }}
-            >
-              <Image
-                alt="Oops"
-                width={500}
-                height={300}
-                src={"/photos/" + popupInfo.properties.photo_name}
-              />
-            </div>
+            <Image
+              alt="Oops"
+              //   className="w-full"
+              width={600}
+              height={400}
+              src={"/photos/" + popupInfo.properties.photo_name}
+            />
             {/* <img width="100%" src={"../data/photos/" + popupInfo.photo_name} /> */}
           </Popup>
         )}
