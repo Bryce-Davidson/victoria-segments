@@ -1,6 +1,6 @@
-import { FeatureCollection } from "geojson";
+import { FeatureCollection, Point } from "geojson";
 
-const photo_map: any = {
+const photo_map: FeatureCollection<Point> = {
   type: "FeatureCollection",
   features: [
     {
