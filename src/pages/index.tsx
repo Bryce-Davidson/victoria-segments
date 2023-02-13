@@ -35,7 +35,7 @@ const Home: NextPage = () => {
   const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);
 
   return (
-    <div>
+    <div className="h-screen">
       <Map
         initialViewState={{
           fitBoundsOptions: {
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
           },
           bounds: [minLng, minLat, maxLng, maxLat],
         }}
-        style={{ width: 800, height: 600 }}
+        style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
       >
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
               latitude={point.geometry.coordinates[1]}
               anchor="bottom"
               onClick={(e) => {
-                // If we let the click event propagates to the map, it will immediately close the popup
+                // If we let the click event propagate to the map, it will immediately close the popup
                 // with `closeOnClick: true`
                 setPopupInfo(point);
                 e.originalEvent.stopPropagation();
