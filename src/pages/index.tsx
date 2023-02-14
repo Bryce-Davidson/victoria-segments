@@ -62,7 +62,32 @@ const Home: NextPage = () => {
                 e.originalEvent.stopPropagation();
               }}
             >
-              <Pin />
+              {/* <Pin /> */}
+              <div
+                className=""
+                style={{
+                  width: "50px",
+                  height: "50px",
+                  overflow: "hidden",
+                  borderRadius: "50%",
+                  background: "#ffffff",
+                  border: "2px solid white",
+                  position: "relative",
+                }}
+              >
+                <Image
+                  alt="Oops"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    scale: "2x",
+                  }}
+                  width={400}
+                  height={400}
+                  className="mt-2"
+                  src={"/photos/" + point?.properties?.photo_name}
+                />
+              </div>
             </Marker>
           );
         })}
@@ -81,9 +106,9 @@ const Home: NextPage = () => {
           >
             <Image
               alt="Oops"
-              //   className="w-full"
-              width={600}
-              height={400}
+              className="w-full"
+              width={300}
+              height={225}
               src={"/photos/" + popupInfo.properties.photo_name}
             />
             {/* <img width="100%" src={"../data/photos/" + popupInfo.photo_name} /> */}
