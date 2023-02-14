@@ -13,8 +13,8 @@ import bbox from "@turf/bbox";
 import downtown_walk_feature from "../data/tracks";
 import photo_map from "../data/photo_map";
 import { Feature, Point } from "geojson";
-import Pin from "./pin";
 import Image from "next/image";
+import ScrollblePhotoTray from "../components/ScrollablePhotoTray";
 
 const layerStyle: any = {
   id: "route",
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
           },
           bounds: [minLng, minLat, maxLng, maxLat],
         }}
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "80%" }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
       >
@@ -80,7 +80,7 @@ const Home: NextPage = () => {
                   style={{
                     width: "100%",
                     height: "auto",
-                    scale: "2x",
+                    scale: "1.5",
                   }}
                   width={400}
                   height={400}
@@ -115,6 +115,7 @@ const Home: NextPage = () => {
           </Popup>
         )}
       </Map>
+      <ScrollblePhotoTray />
     </div>
   );
 };
