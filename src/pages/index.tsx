@@ -14,7 +14,6 @@ import downtown_walk_feature from "../data/tracks";
 import photo_map from "../data/photo_map";
 import { Feature, Point } from "geojson";
 import Image from "next/image";
-import ScrollblePhotoTray from "../components/ScrollablePhotoTray";
 
 const layerStyle: any = {
   id: "route",
@@ -43,7 +42,7 @@ const Home: NextPage = () => {
           },
           bounds: [minLng, minLat, maxLng, maxLat],
         }}
-        style={{ width: "100%", height: "80%" }}
+        style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
       >
@@ -64,7 +63,6 @@ const Home: NextPage = () => {
             >
               {/* <Pin /> */}
               <div
-                className=""
                 style={{
                   width: "50px",
                   height: "50px",
@@ -82,8 +80,8 @@ const Home: NextPage = () => {
                     height: "auto",
                     scale: "1.5",
                   }}
-                  width={400}
-                  height={400}
+                  width={500}
+                  height={500}
                   className="mt-2"
                   src={"/photos/" + point?.properties?.photo_name}
                 />
@@ -107,15 +105,14 @@ const Home: NextPage = () => {
             <Image
               alt="Oops"
               className="w-full"
-              width={300}
-              height={225}
+              width={400}
+              height={350}
               src={"/photos/" + popupInfo.properties.photo_name}
             />
             {/* <img width="100%" src={"../data/photos/" + popupInfo.photo_name} /> */}
           </Popup>
         )}
       </Map>
-      <ScrollblePhotoTray />
     </div>
   );
 };
