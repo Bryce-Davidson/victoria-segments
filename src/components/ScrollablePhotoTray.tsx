@@ -8,7 +8,8 @@ function ScrollblePhotoTray() {
       className=""
       style={{
         height: "100%",
-        overflow: "scroll",
+        overflow: "auto",
+        whiteSpace: "nowrap",
       }}
     >
       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17].map(
@@ -20,7 +21,7 @@ function ScrollblePhotoTray() {
                 width: "300px",
                 overflowX: "scroll",
               }}
-              className="m-5 bg-black"
+              className="m-5 inline-block bg-black"
             ></div>
           );
         }
