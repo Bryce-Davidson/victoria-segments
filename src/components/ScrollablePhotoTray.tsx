@@ -1,31 +1,39 @@
 import Image from "next/image";
+import photo_map from "../data/photo_map";
 
 function ScrollblePhotoTray() {
-  // for each image in the photos folder
-  //   generate a image component in the div
   return (
     <div
-      className=""
+      className="fixed bottom-0 w-screen bg-slate-500 bg-opacity-25 align-middle"
       style={{
-        height: "100%",
+        height: "30vh",
         overflow: "auto",
         whiteSpace: "nowrap",
       }}
     >
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17].map(
-        (photo) => {
-          return (
-            <div
+      {photo_map.features.map((photo, index) => {
+        return (
+          <div
+            key={index}
+            style={{
+              height: "70%",
+              width: "300px",
+              overflow: "hidden",
+            }}
+            className="m-5 inline-block bg-black"
+          >
+            <Image
               style={{
-                height: "300px",
-                width: "300px",
-                overflowX: "scroll",
+                width: "100%",
               }}
-              className="m-5 inline-block bg-black"
-            ></div>
-          );
-        }
-      )}
+              width={500}
+              height={500}
+              alt="oops"
+              src={"/photos/" + photo?.properties?.photo_name}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }

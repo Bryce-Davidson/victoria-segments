@@ -14,6 +14,7 @@ import downtown_walk_feature from "../data/tracks";
 import photo_map from "../data/photo_map";
 import { Feature, Point } from "geojson";
 import Image from "next/image";
+import ScrollblePhotoTray from "../components/ScrollablePhotoTray";
 
 const layerStyle: any = {
   id: "route",
@@ -34,7 +35,7 @@ const Home: NextPage = () => {
   const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);
 
   return (
-    <div className="h-screen">
+    <div className="relative" style={{ height: "100vh" }}>
       <Map
         initialViewState={{
           fitBoundsOptions: {
@@ -113,6 +114,7 @@ const Home: NextPage = () => {
           </Popup>
         )}
       </Map>
+      <ScrollblePhotoTray />
     </div>
   );
 };
