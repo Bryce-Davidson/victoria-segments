@@ -14,7 +14,7 @@ import downtown_walk_feature from "../data/tracks";
 import photo_map from "../data/photo_map";
 import { Feature, Point } from "geojson";
 import Image from "next/image";
-import ScrollblePhotoTray from "../components/ScrollablePhotoTray";
+import ScrollblePhotoTray from "../components/ScrollablePhotoTray/ScrollablePhotoTray";
 
 const layerStyle: any = {
   id: "route",
