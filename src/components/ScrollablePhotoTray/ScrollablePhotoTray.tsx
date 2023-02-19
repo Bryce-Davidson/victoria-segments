@@ -4,10 +4,10 @@ import styles from "./ScrollablePhotoTray.module.css";
 
 function ScrollblePhotoTray() {
   return (
-    <div>
+    <div className={styles.media_scroller}>
       {photo_map.features.map((photo, index) => {
         return (
-          <div key={index} className={styles.hello}>
+          <div key={index} className={styles.media_element}>
             <Image
               width={700}
               height={700}
