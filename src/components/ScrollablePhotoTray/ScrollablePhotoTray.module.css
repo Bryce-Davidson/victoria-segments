@@ -1,7 +1,8 @@
 .media_scroller {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 29%;
+  white-space: nowrap;
+  width: 100vw;
+  height: 25vh;
+
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   position: fixed;
@@ -11,11 +12,16 @@
 }
 
 .media_element {
+  display: inline-block;
+  height: 100%;
   padding: 1rem;
 }
 
 .media_element > img {
   object-fit: cover;
+  display: inline;
+  height: 100%;
+  width: auto;
   aspect-ratio: 3/2;
   border-radius: 0.2rem;
 }

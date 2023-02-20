@@ -9,8 +9,8 @@ function ScrollblePhotoTray() {
         return (
           <div key={index} className={styles.media_element}>
             <Image
-              width={700}
-              height={700}
+              width={640}
+              height={360}
               alt="oops"
               src={"/photos/" + photo?.properties?.photo_name}
             />
