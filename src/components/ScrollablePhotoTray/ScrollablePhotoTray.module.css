@@ -2,21 +2,20 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 29%;
-  gap: 1rem;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   position: fixed;
   background-color: #cbd5e150;
   bottom: 0px;
+  margin-bottom: 1rem;
 }
 
 .media_element {
   padding: 1rem;
-  border-radius: 2px;
 }
 
 .media_element > img {
-  aspect-ratio: 3/2;
   object-fit: cover;
+  aspect-ratio: 3/2;
   border-radius: 0.2rem;
 }
