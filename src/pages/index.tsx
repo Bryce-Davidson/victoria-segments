@@ -26,7 +26,7 @@ const layerStyle: any = {
   },
   paint: {
     "line-color": "#FFA500",
-    "line-width": 6,
+    "line-width": 4,
   },
 };
 

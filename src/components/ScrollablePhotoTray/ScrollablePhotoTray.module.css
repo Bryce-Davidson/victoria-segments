@@ -20,7 +20,7 @@
 }
 
 .media_element > img {
-  object-fit: cover;
+  /* object-fit: cover; */
   display: inline;
   height: 100%;
   width: auto;
