@@ -7,7 +7,7 @@
 
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  position: fixed;
+  /* position: fixed; */
   background-color: #cbd5e150;
   bottom: 0px;
   margin-bottom: 1rem;
