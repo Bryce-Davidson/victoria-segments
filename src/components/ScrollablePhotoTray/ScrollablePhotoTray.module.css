@@ -3,6 +3,8 @@
   width: 100vw;
   height: 25vh;
 
+  display: block;
+
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   position: fixed;
