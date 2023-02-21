@@ -40,8 +40,9 @@ const Home: NextPage = () => {
   function onClick(coords: [number, number]) {
     mapRef.current?.flyTo({
       center: coords,
-      zoom: 17,
+      zoom: 16,
       duration: 1000,
+      offset: [0, 20],
     });
   }
 
@@ -117,13 +118,14 @@ const Home: NextPage = () => {
             focusAfterOpen={true}
             longitude={Number(popupInfo.geometry.coordinates[0])}
             latitude={Number(popupInfo.geometry.coordinates[1])}
-            maxWidth="500px"
+            maxWidth="1000px"
             onClose={() => setPopupInfo(null)}
           >
             <Image
+              className="h-72 w-auto object-cover"
               alt="Oops"
-              width={400}
-              height={400}
+              width={1000}
+              height={1000}
               src={"/photos/" + popupInfo.properties.photo_name}
             />
           </Popup>
