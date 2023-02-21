@@ -3,7 +3,13 @@ import photo_map from "../../data/photo_map";
 import styles from "./ScrollablePhotoTray.module.css";
 import { useEffect, useState } from "react";
 
-function ScrollblePhotoTray() {
+function ScrollblePhotoTray({
+  onClickMarker,
+  setPopupInfo,
+}: {
+  onClickMarker: Function;
+  setPopupInfo: Function;
+}) {
   const [open, setOpen] = useState(true);
 
   let string = open ? "px-4 py-1" : "p-5";
@@ -49,7 +55,17 @@ function ScrollblePhotoTray() {
       >
         {photo_map.features.map((photo, index) => {
           return (
-            <div key={index} className={styles.media_element}>
+            <div
+              style={{
+                cursor: "pointer",
+              }}
+              key={index}
+              className={styles.media_element}
+              onClick={() => {
+                onClickMarker(photo.geometry.coordinates);
+                setPopupInfo(photo);
+              }}
+            >
               <Image
                 width={1280}
                 height={720}

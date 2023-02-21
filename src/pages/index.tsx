@@ -37,18 +37,15 @@ const Home: NextPage = () => {
   const [popupInfo, setPopupInfo] = useState<any>(null);
   const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);
 
-  const onClick = (event: any) => {
+  function onClick(coords: [number, number]) {
     mapRef.current?.flyTo({
-      center: [-123.37054, 48.42098],
+      center: coords,
       zoom: 17,
     });
-  };
+  }
 
   return (
     <div className="relative" style={{ height: "100vh" }}>
-      <button onClick={onClick} className="p-10">
-        FLY TO
-      </button>
       <Map
         ref={mapRef}
         initialViewState={{
@@ -72,7 +69,9 @@ const Home: NextPage = () => {
               onClick={(e) => {
                 // If we let the click event propagate to the map, it will immediately close the popup
                 // with `closeOnClick: true`
+                const coords: any = point.geometry.coordinates;
                 setPopupInfo(point);
+                onClick(coords);
                 e.originalEvent.stopPropagation();
               }}
             >
@@ -109,7 +108,10 @@ const Home: NextPage = () => {
         </Source>
         {popupInfo && (
           <Popup
-            anchor="top"
+            anchor="bottom"
+            offset={{
+              bottom: [0, -50],
+            }}
             closeButton={false}
             focusAfterOpen={true}
             longitude={Number(popupInfo.geometry.coordinates[0])}
@@ -119,15 +121,15 @@ const Home: NextPage = () => {
           >
             <Image
               alt="Oops"
-              className="w-full"
-              width={400}
-              height={350}
+              //   className="w-full"
+              width={500}
+              height={500}
               src={"/photos/" + popupInfo.properties.photo_name}
             />
           </Popup>
         )}
       </Map>
-      <ScrollblePhotoTray />
+      <ScrollblePhotoTray setPopupInfo={setPopupInfo} onClickMarker={onClick} />
     </div>
   );
 };
