@@ -1,13 +1,14 @@
 import { MAPBOX_PUBLIC_TOKEN } from "../utils/mapbox/tokens";
 import type { NextPage } from "next";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Map, {
   FullscreenControl,
   Source,
   Layer,
   Marker,
   Popup,
+  MapRef,
 } from "react-map-gl";
 import bbox from "@turf/bbox";
 import downtown_walk_feature from "../data/tracks";
@@ -31,12 +32,25 @@ const layerStyle: any = {
 };
 
 const Home: NextPage = () => {
+  const mapRef = useRef<MapRef>(null);
+
   const [popupInfo, setPopupInfo] = useState<any>(null);
   const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);
 
+  const onClick = (event: any) => {
+    mapRef.current?.flyTo({
+      center: [-123.37054, 48.42098],
+      zoom: 17,
+    });
+  };
+
   return (
     <div className="relative" style={{ height: "100vh" }}>
+      <button onClick={onClick} className="p-10">
+        FLY TO
+      </button>
       <Map
+        ref={mapRef}
         initialViewState={{
           fitBoundsOptions: {
             padding: { top: 100, bottom: 100, left: 100, right: 100 },
@@ -110,7 +124,6 @@ const Home: NextPage = () => {
               height={350}
               src={"/photos/" + popupInfo.properties.photo_name}
             />
-            {/* <img width="100%" src={"../data/photos/" + popupInfo.photo_name} /> */}
           </Popup>
         )}
       </Map>
