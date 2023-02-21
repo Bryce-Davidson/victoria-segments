@@ -41,6 +41,7 @@ const Home: NextPage = () => {
     mapRef.current?.flyTo({
       center: coords,
       zoom: 17,
+      duration: 1000,
     });
   }
 
@@ -94,8 +95,8 @@ const Home: NextPage = () => {
                     height: "auto",
                     scale: "1.5",
                   }}
-                  width={500}
-                  height={500}
+                  width={300}
+                  height={300}
                   className="mt-2"
                   src={"/photos/" + point?.properties?.photo_name}
                 />
@@ -116,14 +117,13 @@ const Home: NextPage = () => {
             focusAfterOpen={true}
             longitude={Number(popupInfo.geometry.coordinates[0])}
             latitude={Number(popupInfo.geometry.coordinates[1])}
-            maxWidth="800px"
+            maxWidth="500px"
             onClose={() => setPopupInfo(null)}
           >
             <Image
               alt="Oops"
-              //   className="w-full"
-              width={500}
-              height={500}
+              width={400}
+              height={400}
               src={"/photos/" + popupInfo.properties.photo_name}
             />
           </Popup>
