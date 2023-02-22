@@ -53,7 +53,7 @@ function ScrollblePhotoTray({
           display: open ? "block" : "none",
         }}
       >
-        {photo_map.features.map((photo, index) => {
+        {photo_map.features.map((photo: any, index: number) => {
           return (
             <div
               style={{
@@ -67,8 +67,8 @@ function ScrollblePhotoTray({
               }}
             >
               <Image
-                width={1280}
-                height={720}
+                width={640}
+                height={360}
                 alt="oops"
                 src={"/photos/" + photo?.properties?.photo_name}
               />

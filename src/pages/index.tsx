@@ -6,16 +6,20 @@ import Map, {
   FullscreenControl,
   Source,
   Layer,
-  Marker,
   Popup,
   MapRef,
 } from "react-map-gl";
 import bbox from "@turf/bbox";
 import downtown_walk_feature from "../data/tracks";
 import photo_map from "../data/photo_map";
-import { Feature, Point } from "geojson";
 import Image from "next/image";
 import ScrollblePhotoTray from "../components/ScrollablePhotoTray/ScrollablePhotoTray";
+import {
+  clusterLayer,
+  clusterCountLayer,
+  unclusteredPointLayer,
+} from "../components/Layers/PhotoClusterLayers";
+import PhotoMarkers from "../components/PhotoMarkers";
 
 const layerStyle: any = {
   id: "route",
@@ -37,7 +41,11 @@ const Home: NextPage = () => {
   const [popupInfo, setPopupInfo] = useState<any>(null);
   const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);
 
-  function onClick(coords: [number, number]) {
+  function handleClusterClick(event: any) {
+    console.log(event.features);
+  }
+
+  function handleMarkerClick(coords: [number, number]) {
     mapRef.current?.flyTo({
       center: coords,
       zoom: 16,
@@ -52,62 +60,37 @@ const Home: NextPage = () => {
         ref={mapRef}
         initialViewState={{
           fitBoundsOptions: {
-            padding: { top: 100, bottom: 100, left: 100, right: 100 },
+            padding: { top: 100, bottom: 400, left: 100, right: 100 },
           },
           bounds: [minLng, minLat, maxLng, maxLat],
         }}
+        onClick={handleClusterClick}
         style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
+        interactiveLayerIds={[layerStyle.id]}
         mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
       >
-        <FullscreenControl />
-        {photo_map.features.map((point: Feature<Point>, index: number) => {
-          return (
-            <Marker
-              key={`marker-${index}`}
-              longitude={point.geometry.coordinates[0]}
-              latitude={point.geometry.coordinates[1]}
-              anchor="bottom"
-              onClick={(e) => {
-                // If we let the click event propagate to the map, it will immediately close the popup
-                // with `closeOnClick: true`
-                const coords: any = point.geometry.coordinates;
-                setPopupInfo(point);
-                onClick(coords);
-                e.originalEvent.stopPropagation();
-              }}
-            >
-              {/* <Pin /> */}
-              <div
-                style={{
-                  width: "50px",
-                  height: "50px",
-                  overflow: "hidden",
-                  borderRadius: "50%",
-                  background: "#ffffff",
-                  border: "2px solid white",
-                  position: "relative",
-                }}
-              >
-                <Image
-                  alt="Oops"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    scale: "1.5",
-                  }}
-                  width={300}
-                  height={300}
-                  className="mt-2"
-                  src={"/photos/" + point?.properties?.photo_name}
-                />
-              </div>
-            </Marker>
-          );
-        })}
-        <Source id="my-data" type="geojson" data={downtown_walk_feature}>
-          <Layer {...layerStyle} />
+        <Source
+          id="earthquakes"
+          type="geojson"
+          data={photo_map}
+          cluster={true}
+          clusterMaxZoom={14}
+          clusterRadius={20}
+        >
+          <Layer {...clusterLayer} />
+          <Layer {...clusterCountLayer} />
+          <Layer {...unclusteredPointLayer} />
         </Source>
+        {/* <FullscreenControl /> */}
+        <PhotoMarkers
+          setPopupInfo={setPopupInfo}
+          handleMarkerClick={handleMarkerClick}
+        />
+        {/* <Source id="my-data" type="geojson" data={downtown_walk_feature}>
+          <Layer {...layerStyle} />
+        </Source> */}
+
         {popupInfo && (
           <Popup
             anchor="bottom"
@@ -124,14 +107,17 @@ const Home: NextPage = () => {
             <Image
               className="h-72 w-auto object-cover"
               alt="Oops"
-              width={1000}
-              height={1000}
+              width={640}
+              height={360}
               src={"/photos/" + popupInfo.properties.photo_name}
             />
           </Popup>
         )}
       </Map>
-      <ScrollblePhotoTray setPopupInfo={setPopupInfo} onClickMarker={onClick} />
+      <ScrollblePhotoTray
+        setPopupInfo={setPopupInfo}
+        onClickMarker={handleMarkerClick}
+      />
     </div>
   );
 };
