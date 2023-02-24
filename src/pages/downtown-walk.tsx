@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const DowntownWalk: NextPage = () => {
   return (
-    <main>
-      <section id="hero-image" className={styles.hero}>
+    <main className="h-screen">
+      <section className={styles.hero}>
         <Image
           src={"/photos/3_harbour.JPG"}
           alt="hero image of downtown victoria"
