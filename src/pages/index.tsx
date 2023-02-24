@@ -8,6 +8,7 @@ import Map, {
   Layer,
   Popup,
   MapRef,
+  MapSourceDataEvent,
 } from "react-map-gl";
 import bbox from "@turf/bbox";
 import downtown_walk_feature from "../data/tracks";
@@ -57,10 +58,11 @@ const Home: NextPage = () => {
   return (
     <div className="relative" style={{ height: "100vh" }}>
       <Map
+        onDrag={() => setPopupInfo(null)}
         ref={mapRef}
         initialViewState={{
           fitBoundsOptions: {
-            padding: { top: 100, bottom: 400, left: 100, right: 100 },
+            padding: { top: 100, bottom: 350, left: 100, right: 100 },
           },
           bounds: [minLng, minLat, maxLng, maxLat],
         }}
@@ -70,26 +72,26 @@ const Home: NextPage = () => {
         interactiveLayerIds={[layerStyle.id]}
         mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
       >
-        <Source
+        <Source id="my-data" type="geojson" data={downtown_walk_feature}>
+          <Layer {...layerStyle} />
+        </Source>
+        {/* <Source
           id="earthquakes"
           type="geojson"
           data={photo_map}
           cluster={true}
-          clusterMaxZoom={14}
-          clusterRadius={20}
+          clusterMaxZoom={15}
+          clusterRadius={50}
         >
           <Layer {...clusterLayer} />
           <Layer {...clusterCountLayer} />
           <Layer {...unclusteredPointLayer} />
-        </Source>
-        {/* <FullscreenControl /> */}
+        </Source> */}
+        <FullscreenControl />
         <PhotoMarkers
           setPopupInfo={setPopupInfo}
           handleMarkerClick={handleMarkerClick}
         />
-        {/* <Source id="my-data" type="geojson" data={downtown_walk_feature}>
-          <Layer {...layerStyle} />
-        </Source> */}
 
         {popupInfo && (
           <Popup
@@ -103,6 +105,7 @@ const Home: NextPage = () => {
             latitude={Number(popupInfo.geometry.coordinates[1])}
             maxWidth="1000px"
             onClose={() => setPopupInfo(null)}
+            // closeOnMove={true}
           >
             <Image
               className="h-72 w-auto object-cover"
