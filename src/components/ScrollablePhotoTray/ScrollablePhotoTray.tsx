@@ -67,8 +67,8 @@ function ScrollblePhotoTray({
               }}
             >
               <Image
-                width={640}
-                height={360}
+                width={275}
+                height={175}
                 alt="oops"
                 src={"/photos/" + photo?.properties?.photo_name}
               />

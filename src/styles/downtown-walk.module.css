@@ -1,0 +1,17 @@
+.hero {
+  width: 100vw;
+  height: 70vh;
+  background-color: bisque;
+}
+
+.hero > img {
+  object-fit: cover;
+  object-position: 50% 20%;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3/2;
+}
+
+.section {
+  background-color: aqua;
+}

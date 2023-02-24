@@ -24,6 +24,7 @@
     "mapbox-gl": "^2.12.1",
     "next": "13.1.6",
     "next-auth": "^4.19.0",
+    "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-map-gl": "^7.0.21",
