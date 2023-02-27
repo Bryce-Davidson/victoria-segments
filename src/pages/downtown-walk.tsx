@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import styles from "../styles/downtown-walk.module.css";
 import Image from "next/image";
 import SegmentDetail from "../components/SegmentDetails/SegmentDetail";
+import Link from "next/link";
 
 const DowntownWalk: NextPage = () => {
   return (
@@ -57,16 +58,40 @@ const DowntownWalk: NextPage = () => {
           height={250}
         ></Image>
       </section>
-      <section id="route-preview-map">
-        <Image
-          className={styles.map_preview}
-          alt="downtown walk map preview"
-          src="/previews/0_downtown_walk.png"
-          width={1280}
-          height={720}
-        />
+      <section id="segment-statistics">
+        <div className={styles.segment_details}>
+          <div className="flex gap-4 rounded-lg p-10 shadow-md">
+            <p>3h</p>
+            <p>3.2km/1.8mi</p>
+          </div>
+        </div>
       </section>
-      <section id="segment-details"></section>
+      <section id="route-preview-map">
+        <div className="relative">
+          <Link
+            href="/"
+            className="absolute bottom-4
+            left-1/2 -translate-x-1/2 rounded-md bg-white py-4 px-8"
+          >
+            <h4>View Full Map</h4>
+          </Link>
+          <Image
+            className={styles.map_preview}
+            alt="downtown walk map preview"
+            src="/previews/0_downtown_walk.png"
+            width={1280}
+            height={720}
+          />
+        </div>
+      </section>
+      <section
+        id="segment-details"
+        className="mt-10 flex flex-col items-center gap-20"
+      >
+        <SegmentDetail />
+        <SegmentDetail />
+        <SegmentDetail />
+      </section>
     </main>
   );
 };

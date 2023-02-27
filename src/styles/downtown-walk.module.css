@@ -29,28 +29,31 @@
 }
 
 .description > h2 {
-  @apply text-xl font-medium;
-  text-align: center;
+  @apply text-center text-xl font-medium;
 }
 
 .description > p {
-  margin-top: 1rem;
-  text-align: justify;
+  @apply mt-4 text-justify;
 }
 
 .map_preview {
-  @apply sm:mt-0;
-  object-fit: cover;
-  width: 100%;
-  height: auto;
+  @apply h-auto w-full object-cover sm:mt-0;
 }
 
 .featured_photos_tray {
-  @apply grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-4 md:grid-rows-1;
+  @apply grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1;
 }
 
 .featured_photos_tray > img {
   object-fit: cover;
   width: 100%;
   height: auto;
+}
+
+.segment_details {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem auto;
+  padding: 1rem;
 }

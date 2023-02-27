@@ -5,4 +5,5 @@
 html,
 body {
   overscroll-behavior: none;
+  margin-bottom: 3rem;
 }

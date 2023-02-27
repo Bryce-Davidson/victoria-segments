@@ -75,18 +75,6 @@ const Home: NextPage = () => {
         <Source id="my-data" type="geojson" data={downtown_walk_feature}>
           <Layer {...layerStyle} />
         </Source>
-        {/* <Source
-          id="earthquakes"
-          type="geojson"
-          data={photo_map}
-          cluster={true}
-          clusterMaxZoom={15}
-          clusterRadius={50}
-        >
-          <Layer {...clusterLayer} />
-          <Layer {...clusterCountLayer} />
-          <Layer {...unclusteredPointLayer} />
-        </Source> */}
         <FullscreenControl />
         <PhotoMarkers
           setPopupInfo={setPopupInfo}
@@ -105,13 +93,12 @@ const Home: NextPage = () => {
             latitude={Number(popupInfo.geometry.coordinates[1])}
             maxWidth="1000px"
             onClose={() => setPopupInfo(null)}
-            // closeOnMove={true}
           >
             <Image
               className="h-72 w-auto object-cover"
               alt="Oops"
-              width={640}
-              height={360}
+              width={500}
+              height={250}
               src={"/photos/" + popupInfo.properties.photo_name}
             />
           </Popup>
