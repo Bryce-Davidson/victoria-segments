@@ -4,14 +4,14 @@ import photo_map from "../src/data/photo_map";
 import fs from "fs";
 
 describe("Static Map API", () => {
-  it.skip("gets a static map", async () => {
+  it("gets a static map", async () => {
     const request = mbxStaticClient.getStaticImage({
       ownerId: "mapbox",
       styleId: "streets-v11",
       width: 1280,
-      height: 720,
+      height: 500,
       position: "auto",
-      padding: "75",
+      padding: "0,300,0,300",
       overlays: [downtown_walk_path],
     });
     const staticImageUrl = request.url();
@@ -28,7 +28,7 @@ describe("Static Map API", () => {
         ownerId: "mapbox",
         styleId: "streets-v11",
         width: 1280,
-        height: 720,
+        height: 500,
         position: "auto",
         padding: "75",
         overlays: [point_1],

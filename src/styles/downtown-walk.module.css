@@ -1,16 +1,56 @@
-.hero {
-  width: 100vw;
-  @apply h-1/4 md:h-2/3;
-  background-color: bisque;
+.hero_container {
+  position: relative;
+  height: 70vh;
 }
 
-.hero > img {
+.hero_container > img {
   object-fit: cover;
-  object-position: 50% 20%;
-  width: 100%;
+  object-position: 50% 22%;
   height: 100%;
+  width: 100%;
 }
 
-.section {
-  background-color: aqua;
+.hero_image_title {
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  transform: translate(-50%, -50%);
+  background: #f1f5f99f;
+}
+
+.description {
+  @apply w-full sm:w-3/5;
+  margin: 7rem auto;
+  padding: 0 3rem;
+}
+
+.description > h2 {
+  @apply text-xl font-medium;
+  text-align: center;
+}
+
+.description > p {
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+.map_preview {
+  @apply sm:mt-0;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.featured_photos_tray {
+  @apply grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-4 md:grid-rows-1;
+}
+
+.featured_photos_tray > img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
