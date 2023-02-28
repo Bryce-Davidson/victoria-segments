@@ -3,6 +3,10 @@ import styles from "../styles/downtown-walk.module.css";
 import Image from "next/image";
 import SegmentDetail from "../components/SegmentDetails/SegmentDetail";
 import Link from "next/link";
+import AlarmAddRoundedIcon from "@mui/icons-material/AlarmAddRounded";
+import RouteOutlinedIcon from "@mui/icons-material/RouteOutlined";
+import InteractiveMapButton from "../components/Buttons/InteractiveMapButton";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const DowntownWalk: NextPage = () => {
   return (
@@ -59,65 +63,23 @@ const DowntownWalk: NextPage = () => {
         ></Image>
       </section>
       <section id="segment-statistics">
-        <div className={styles.segment_details}>
-          <div className="flex gap-4 rounded-lg p-10 text-lg font-medium shadow-md">
-            <div className="flex items-center justify-center gap-1">
-              <svg
-                className="inline"
-                width="22"
-                height="22"
-                viewBox="0 0 96 96"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clipPath="url(#clip0_51_21)">
-                  <path
-                    d="M47.96 8C25.88 8 8 25.92 8 48C8 70.08 25.88 88 47.96 88C70.08 88 88 70.08 88 48C88 25.92 70.08 8 47.96 8ZM48 80C30.32 80 16 65.68 16 48C16 30.32 30.32 16 48 16C65.68 16 80 30.32 80 48C80 65.68 65.68 80 48 80Z"
-                    fill="black"
-                  />
-                  <path
-                    d="M50 28H44V52L65 64.6L68 59.68L50 49V28Z"
-                    fill="black"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_51_21">
-                    <rect width="96" height="96" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              <p>3h</p>
-            </div>
-            <div>
-              <p>3.2km / 1.8mi</p>
+        <div className="mx-auto my-10 flex w-full justify-center gap-4  bg-cyan-400 bg-opacity-80 p-5 text-lg font-medium shadow-xl sm:p-10">
+          <div className="gap- flex items-center justify-center">
+            <AlarmAddRoundedIcon />
+            <p className="ml-1">1h</p>
+          </div>
+          <div className="flex items-center justify-center gap-1">
+            <RouteOutlinedIcon />
+            <div className="flex flex-col items-center">
+              <p className="font-normal">2.0km</p>
+              <p className="font-mono text-xs font-thin">1.24mi</p>
             </div>
           </div>
         </div>
       </section>
       <section id="route-preview-map">
         <div className="relative">
-          <Link
-            href="/"
-            className="absolute bottom-8
-            left-1/2 flex -translate-x-1/2 items-center gap-4 rounded-md bg-white py-4 px-8"
-          >
-            <h4>Interactive Map</h4>
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 5V1M1 1H5M1 1L6 6M17 5V1M17 1H13M17 1L12 6M1 13V17M1 17H5M1 17L6 12M17 17L12 12M17 17V13M17 17H13"
-                stroke="black"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
+          <InteractiveMapButton href="/" />
           <Image
             className={styles.map_preview}
             alt="downtown walk map preview"
@@ -127,13 +89,35 @@ const DowntownWalk: NextPage = () => {
           />
         </div>
       </section>
-      <section
-        id="segment-details"
-        className="mt-10 flex flex-col items-center gap-20"
-      >
-        <SegmentDetail />
-        <SegmentDetail />
-        <SegmentDetail />
+      <section id="segment-details" className="mt-20">
+        <SegmentDetail
+          mainSrc="/photos/1_harbour.JPG"
+          mainAlt="downtown victoria harbour"
+          mapSrc="/previews/0_harbour_segment.png"
+          mapAlt="preview map"
+        />
+        <SegmentDetail
+          mainSrc="/photos/11_david_foster.JPG"
+          mainAlt="david foster path"
+          mapSrc="/previews/0_david_foster_segment.png"
+          mapAlt="david foster path preview"
+          objectFit="object-[50%,50%]"
+        />
+        <SegmentDetail
+          mainSrc="/photos/22_fishermans_wharf.JPG"
+          mainAlt="fishermans wharf"
+          mapSrc="/previews/0_fishermans_wharf_segment.png"
+          mapAlt="fishermans wharf map preview"
+          objectFit="object-[50%,60%]"
+        />
+      </section>
+      <section id="route-buttons">
+        <div className="mb-20 flex flex-col items-center">
+          <div className="flex items-center justify-center gap-4 rounded-lg bg-cyan-400 p-4 shadow-lg">
+            <h2 className="text-2xl">Begin Route</h2>
+            <PlayArrowIcon />
+          </div>
+        </div>
       </section>
     </main>
   );

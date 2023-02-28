@@ -11,6 +11,7 @@
 }
 
 .hero_image_title {
+  @apply text-lg font-medium sm:text-2xl;
   text-align: center;
   top: 50%;
   left: 50%;
@@ -37,7 +38,7 @@
 }
 
 .map_preview {
-  @apply h-auto w-full object-cover sm:mt-0;
+  @apply h-96 w-full object-cover sm:mt-0 lg:h-auto;
 }
 
 .featured_photos_tray {
@@ -48,12 +49,4 @@
   object-fit: cover;
   width: 100%;
   height: auto;
-}
-
-.segment_details {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin: 3rem auto;
-  padding: 1rem;
 }

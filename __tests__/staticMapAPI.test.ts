@@ -1,10 +1,28 @@
 import mbxStaticClient from "../src/utils/mapbox/staticClient";
 import downtown_walk_path from "../src/data/downtown_walk";
+import harbour_segment from "../src/data/harbour_segment";
+import david_foster_segment from "../src/data/david_foster_segment";
+import fishermans_wharf_segment from "../src/data/fishermans_wharf_segment";
 import photo_map from "../src/data/photo_map";
 import fs from "fs";
 
 describe("Static Map API", () => {
-  it("gets a static map", async () => {
+  it("gets a static map of harbour", async () => {
+    const request = mbxStaticClient.getStaticImage({
+      ownerId: "mapbox",
+      styleId: "streets-v11",
+      width: 1280,
+      height: 500,
+      position: "auto",
+      padding: "100,100,100,100",
+      overlays: [fishermans_wharf_segment],
+    });
+    const staticImageUrl = request.url();
+    console.log(staticImageUrl);
+    expect(staticImageUrl);
+  });
+
+  it.skip("gets a static map", async () => {
     const request = mbxStaticClient.getStaticImage({
       ownerId: "mapbox",
       styleId: "streets-v11",
@@ -30,7 +48,7 @@ describe("Static Map API", () => {
         width: 1280,
         height: 500,
         position: "auto",
-        padding: "75",
+        padding: "100,100,100,100",
         overlays: [point_1],
       });
       const staticImageUrl = request.url();
