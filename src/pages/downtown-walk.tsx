@@ -60,9 +60,37 @@ const DowntownWalk: NextPage = () => {
       </section>
       <section id="segment-statistics">
         <div className={styles.segment_details}>
-          <div className="flex gap-4 rounded-lg p-10 shadow-md">
-            <p>3h</p>
-            <p>3.2km/1.8mi</p>
+          <div className="flex gap-4 rounded-lg p-10 text-lg font-medium shadow-md">
+            <div className="flex items-center justify-center gap-1">
+              <svg
+                className="inline"
+                width="22"
+                height="22"
+                viewBox="0 0 96 96"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clipPath="url(#clip0_51_21)">
+                  <path
+                    d="M47.96 8C25.88 8 8 25.92 8 48C8 70.08 25.88 88 47.96 88C70.08 88 88 70.08 88 48C88 25.92 70.08 8 47.96 8ZM48 80C30.32 80 16 65.68 16 48C16 30.32 30.32 16 48 16C65.68 16 80 30.32 80 48C80 65.68 65.68 80 48 80Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M50 28H44V52L65 64.6L68 59.68L50 49V28Z"
+                    fill="black"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_51_21">
+                    <rect width="96" height="96" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <p>3h</p>
+            </div>
+            <div>
+              <p>3.2km / 1.8mi</p>
+            </div>
           </div>
         </div>
       </section>
@@ -70,10 +98,25 @@ const DowntownWalk: NextPage = () => {
         <div className="relative">
           <Link
             href="/"
-            className="absolute bottom-4
-            left-1/2 -translate-x-1/2 rounded-md bg-white py-4 px-8"
+            className="absolute bottom-8
+            left-1/2 flex -translate-x-1/2 items-center gap-4 rounded-md bg-white py-4 px-8"
           >
-            <h4>View Full Map</h4>
+            <h4>View Map</h4>
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 5V1M1 1H5M1 1L6 6M17 5V1M17 1H13M17 1L12 6M1 13V17M1 17H5M1 17L6 12M17 17L12 12M17 17V13M17 17H13"
+                stroke="black"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </Link>
           <Image
             className={styles.map_preview}
