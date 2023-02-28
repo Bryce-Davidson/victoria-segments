@@ -101,7 +101,7 @@ const DowntownWalk: NextPage = () => {
             className="absolute bottom-8
             left-1/2 flex -translate-x-1/2 items-center gap-4 rounded-md bg-white py-4 px-8"
           >
-            <h4>View Map</h4>
+            <h4>Interactive Map</h4>
             <svg
               width="15"
               height="15"
