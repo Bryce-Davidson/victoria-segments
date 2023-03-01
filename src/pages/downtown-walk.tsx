@@ -63,7 +63,7 @@ const DowntownWalk: NextPage = () => {
         ></Image>
       </section>
       <section id="segment-statistics">
-        <div className="contain mx-auto my-10 flex w-full justify-center  gap-4 bg-cyan-400 bg-opacity-80 p-5 text-lg font-medium mix-blend-screen shadow-xl sm:p-10">
+        <div className="contain mx-auto my-10 flex w-full justify-center  gap-4 bg-cyan-100 bg-opacity-80 p-5 text-lg font-medium mix-blend-screen shadow-xl sm:p-10">
           <div className="gap- flex items-center justify-center">
             <AlarmAddRoundedIcon />
             <p className="ml-1">1h</p>
@@ -96,6 +96,7 @@ const DowntownWalk: NextPage = () => {
           mapSrc="/previews/0_harbour_segment.png"
           mapAlt="preview map"
           title="Victoria Harbour"
+          description="Victoria's Inner Harbour is a popular tourist destination located on Vancouver Island in British Columbia, Canada. The harbour, originally a trading post established by the Hudson's Bay Company in the 1800s, is now home to a variety of attractions. One of the most popular is the stunning Fairmont Empress Hotel, which has been a landmark of Victoria's Inner Harbour for over a century. Visitors can also enjoy a variety of restaurants, shops, and museums, including the Royal BC Museum and the Maritime Museum of British Columbia. The harbour is also a hub for boat tours, including whale watching tours and seaplane adventures."
         />
         <hr className="mx-auto w-1/2 border border-gray-500" />
         <SegmentDetail
@@ -105,6 +106,7 @@ const DowntownWalk: NextPage = () => {
           mapAlt="david foster path preview"
           objectFit="object-[50%,60%]"
           title="David Foster Path"
+          description="The David Foster Walking Path is a popular attraction in Victoria, British Columbia, Canada. Named after the famous Canadian musician, the path spans the length of the city's scenic waterfront, offering stunning views of the ocean and the Victoria's inner harbour. The path also features several public art installations and historical landmarks, such as views of Empress Hotel. Whether you're a music lover or simply looking for a picturesque stroll, the David Foster Walking Path offers a unique way to experience Victoria's rich culture and natural beauty."
         />
         <hr className="mx-auto w-1/2 border border-gray-500" />
         <SegmentDetail
@@ -114,6 +116,7 @@ const DowntownWalk: NextPage = () => {
           mapAlt="fishermans wharf map preview"
           objectFit="object-[50%,70%]"
           title="Fishermans Wharf"
+          description="Fisherman's Wharf is a popular tourist destination located in Victoria, British Columbia, Canada. Originally a working fishing community, the wharf is now home to a variety of shops, restaurants, and activities. Visitors can sample fresh seafood, take a whale watching tour, rent kayaks or paddleboards, or simply stroll along the docks and watch the boats come and go. The wharf also features colorful floating homes, which have become a popular attraction in their own right. Whether you're looking for a bite to eat, a unique shopping experience, or a chance to get out on the water, Fisherman's Wharf offers something for everyone."
         />
       </section>
       <section id="route-buttons">

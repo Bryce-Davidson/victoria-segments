@@ -8,19 +8,13 @@ import Map, {
   Layer,
   Popup,
   MapRef,
-  MapSourceDataEvent,
 } from "react-map-gl";
 import bbox from "@turf/bbox";
 import downtown_walk_feature from "../data/tracks";
-import photo_map from "../data/photo_map";
 import Image from "next/image";
 import ScrollblePhotoTray from "../components/ScrollablePhotoTray/ScrollablePhotoTray";
-import {
-  clusterLayer,
-  clusterCountLayer,
-  unclusteredPointLayer,
-} from "../components/Layers/PhotoClusterLayers";
 import PhotoMarkers from "../components/PhotoMarkers";
+import DetailsPopup from "../components/MapComponents/DetailsPopup";
 
 const layerStyle: any = {
   id: "route",
@@ -82,26 +76,7 @@ const Home: NextPage = () => {
         />
 
         {popupInfo && (
-          <Popup
-            anchor="bottom"
-            offset={{
-              bottom: [0, -50],
-            }}
-            closeButton={false}
-            focusAfterOpen={true}
-            longitude={Number(popupInfo.geometry.coordinates[0])}
-            latitude={Number(popupInfo.geometry.coordinates[1])}
-            maxWidth="1000px"
-            onClose={() => setPopupInfo(null)}
-          >
-            <Image
-              className="h-72 w-auto object-cover"
-              alt="Oops"
-              width={500}
-              height={250}
-              src={"/photos/" + popupInfo.properties.photo_name}
-            />
-          </Popup>
+          <DetailsPopup popupInfo={popupInfo} setPopupInfo={setPopupInfo} />
         )}
       </Map>
       <ScrollblePhotoTray
