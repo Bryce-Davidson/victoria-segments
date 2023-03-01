@@ -34,7 +34,7 @@ const Home: NextPage = () => {
   const mapRef = useRef<MapRef>(null);
 
   const [popupInfo, setPopupInfo] = useState<any>(null);
-  //   const [articleOverlay, setArticleOverlay] = useState<any>(true);
+  const [articleOverlay, setArticleOverlay] = useState<any>(true);
 
   const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);
 
@@ -53,9 +53,9 @@ const Home: NextPage = () => {
 
   return (
     <div style={{ height: "100vh" }}>
-      {/* {articleOverlay && (
+      {articleOverlay && (
         <ArticleOverlay setArticleOverlay={setArticleOverlay} />
-      )} */}
+      )}
       <Map
         // onDrag={() => setPopupInfo(null)}
         ref={mapRef}

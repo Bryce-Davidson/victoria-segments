@@ -7,7 +7,7 @@ export default function DetailsPopup({
   popupInfo,
   setPopupInfo,
 }: {
-  popupInfo: any | null;
+  popupInfo: any;
   setPopupInfo: Function;
 }) {
   return (
@@ -17,7 +17,7 @@ export default function DetailsPopup({
         bottom: [0, -50],
       }}
       closeButton={false}
-      focusAfterOpen={true}
+      focusAfterOpen
       longitude={Number(popupInfo.geometry.coordinates[0])}
       latitude={Number(popupInfo.geometry.coordinates[1])}
       maxWidth="1000px"
@@ -25,7 +25,7 @@ export default function DetailsPopup({
     >
       <div className="w-[20rem]">
         <Image
-          className="w-full object-cover"
+          className="max-h-52 w-full object-contain"
           alt="Oops"
           width={500}
           height={250}
