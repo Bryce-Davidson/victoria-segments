@@ -15,6 +15,7 @@ import Image from "next/image";
 import ScrollblePhotoTray from "../components/ScrollablePhotoTray/ScrollablePhotoTray";
 import PhotoMarkers from "../components/PhotoMarkers";
 import DetailsPopup from "../components/MapComponents/DetailsPopup";
+import ArticleOverlay from "../components/MapComponents/ArticleOverlay";
 
 const layerStyle: any = {
   id: "route",
@@ -34,6 +35,8 @@ const Home: NextPage = () => {
   const mapRef = useRef<MapRef>(null);
 
   const [popupInfo, setPopupInfo] = useState<any>(null);
+  const [articleOverlay, setArticleOverlay] = useState<any>(true);
+
   const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);
 
   function handleClusterClick(event: any) {
@@ -51,6 +54,9 @@ const Home: NextPage = () => {
 
   return (
     <div className="relative" style={{ height: "100vh" }}>
+      {articleOverlay && (
+        <ArticleOverlay setArticleOverlay={setArticleOverlay} />
+      )}
       <Map
         // onDrag={() => setPopupInfo(null)}
         ref={mapRef}
