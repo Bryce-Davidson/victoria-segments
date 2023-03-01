@@ -2,11 +2,11 @@ import { NextPage } from "next";
 import styles from "../styles/downtown-walk.module.css";
 import Image from "next/image";
 import SegmentDetail from "../components/SegmentDetails/SegmentDetail";
-import Link from "next/link";
 import AlarmAddRoundedIcon from "@mui/icons-material/AlarmAddRounded";
 import RouteOutlinedIcon from "@mui/icons-material/RouteOutlined";
 import InteractiveMapButton from "../components/Buttons/InteractiveMapButton";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import IosShareIcon from "@mui/icons-material/IosShare";
 
 const DowntownWalk: NextPage = () => {
   return (
@@ -63,7 +63,7 @@ const DowntownWalk: NextPage = () => {
         ></Image>
       </section>
       <section id="segment-statistics">
-        <div className="mx-auto my-10 flex w-full justify-center gap-4  bg-cyan-400 bg-opacity-80 p-5 text-lg font-medium shadow-xl sm:p-10">
+        <div className="contain mx-auto my-10 flex w-full justify-center  gap-4 bg-cyan-400 bg-opacity-80 p-5 text-lg font-medium mix-blend-screen shadow-xl sm:p-10">
           <div className="gap- flex items-center justify-center">
             <AlarmAddRoundedIcon />
             <p className="ml-1">1h</p>
@@ -89,33 +89,42 @@ const DowntownWalk: NextPage = () => {
           />
         </div>
       </section>
-      <section id="segment-details" className="mt-20">
+      <section id="segment-details" className="my-20">
         <SegmentDetail
           mainSrc="/photos/1_harbour.JPG"
           mainAlt="downtown victoria harbour"
           mapSrc="/previews/0_harbour_segment.png"
           mapAlt="preview map"
+          title="Victoria Harbour"
         />
+        <hr className="mx-auto w-1/2 border border-gray-500" />
         <SegmentDetail
           mainSrc="/photos/11_david_foster.JPG"
           mainAlt="david foster path"
           mapSrc="/previews/0_david_foster_segment.png"
           mapAlt="david foster path preview"
-          objectFit="object-[50%,50%]"
+          objectFit="object-[50%,60%]"
+          title="David Foster Path"
         />
+        <hr className="mx-auto w-1/2 border border-gray-500" />
         <SegmentDetail
           mainSrc="/photos/22_fishermans_wharf.JPG"
           mainAlt="fishermans wharf"
           mapSrc="/previews/0_fishermans_wharf_segment.png"
           mapAlt="fishermans wharf map preview"
-          objectFit="object-[50%,60%]"
+          objectFit="object-[50%,70%]"
+          title="Fishermans Wharf"
         />
       </section>
       <section id="route-buttons">
-        <div className="mb-20 flex flex-col items-center">
+        <div className="mb-20 flex w-full flex-row-reverse justify-center gap-4 bg-slate-100 py-10 shadow-inner">
           <div className="flex items-center justify-center gap-4 rounded-lg bg-cyan-400 p-4 shadow-lg">
             <h2 className="text-2xl">Begin Route</h2>
             <PlayArrowIcon />
+          </div>
+          <div className="flex items-center justify-center gap-4 rounded-lg bg-purple-400 p-4  shadow-lg">
+            <h2 className="text-2xl">Share</h2>
+            <IosShareIcon />
           </div>
         </div>
       </section>

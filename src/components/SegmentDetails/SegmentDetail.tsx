@@ -10,19 +10,21 @@ export default function SegmentDetail({
   mapSrc,
   mapAlt,
   objectFit,
+  title,
 }: {
   mainSrc: string;
   mainAlt: string;
   mapSrc: string;
   mapAlt: string;
   objectFit?: string;
+  title?: string;
 }) {
   return (
     <article className="mx-4 mt-10 grid grid-cols-1 grid-rows-[1fr_0.5fr_1fr] gap-8 sm:mx-auto sm:w-2/3 lg:grid-cols-2 lg:grid-rows-[1fr,_0.75fr]">
       <Image
         className={classNames(
           "col-span-full h-72 rounded-md object-cover lg:h-96",
-          objectFit ? objectFit : "object-[50%,22%]"
+          objectFit ?? "object-[50%,22%]"
         )}
         src={mainSrc}
         alt={mainAlt}
@@ -30,7 +32,7 @@ export default function SegmentDetail({
         height={720}
       />
       <div className="col-span-1 row-span-1 font-sans lg:row-span-2">
-        <h3 className="text-2xl">Title</h3>
+        <h3 className="text-2xl">{title ?? "Title"}</h3>
         <p className="mt-2 h-min text-justify">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non fugiat
           commodi sit iusto, minima deleniti sunt sed quisquam quo illum magni
