@@ -45,14 +45,14 @@ const Home: NextPage = () => {
       center: coords,
       zoom: 16,
       duration: 1000,
-      offset: [0, 20],
+      offset: [0, 125],
     });
   }
 
   return (
     <div className="relative" style={{ height: "100vh" }}>
       <Map
-        onDrag={() => setPopupInfo(null)}
+        // onDrag={() => setPopupInfo(null)}
         ref={mapRef}
         initialViewState={{
           fitBoundsOptions: {
