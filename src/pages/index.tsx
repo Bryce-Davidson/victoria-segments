@@ -11,7 +11,6 @@ import Map, {
 } from "react-map-gl";
 import bbox from "@turf/bbox";
 import downtown_walk_feature from "../data/tracks";
-import Image from "next/image";
 import ScrollblePhotoTray from "../components/ScrollablePhotoTray/ScrollablePhotoTray";
 import PhotoMarkers from "../components/PhotoMarkers";
 import DetailsPopup from "../components/MapComponents/DetailsPopup";
@@ -35,7 +34,7 @@ const Home: NextPage = () => {
   const mapRef = useRef<MapRef>(null);
 
   const [popupInfo, setPopupInfo] = useState<any>(null);
-  const [articleOverlay, setArticleOverlay] = useState<any>(true);
+  //   const [articleOverlay, setArticleOverlay] = useState<any>(true);
 
   const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);
 
@@ -53,10 +52,10 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div className="relative" style={{ height: "100vh" }}>
-      {articleOverlay && (
+    <div style={{ height: "100vh" }}>
+      {/* {articleOverlay && (
         <ArticleOverlay setArticleOverlay={setArticleOverlay} />
-      )}
+      )} */}
       <Map
         // onDrag={() => setPopupInfo(null)}
         ref={mapRef}
