@@ -2,7 +2,7 @@ import { MAPBOX_PUBLIC_TOKEN } from "../utils/mapbox/tokens";
 import type { NextPage } from "next";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useState, useRef } from "react";
-import Map, { FullscreenControl, Source, Layer, MapRef } from "react-map-gl";
+import Map, { Source, Layer, MapRef } from "react-map-gl";
 import bbox from "@turf/bbox";
 import downtown_walk_feature from "../data/tracks";
 import ScrollblePhotoTray from "../components/ScrollablePhotoTray/ScrollablePhotoTray";
@@ -12,6 +12,7 @@ import ArticleOverlay from "../components/MapComponents/ArticleOverlay";
 import { Feature, Point } from "geojson";
 import Link from "next/link";
 import linkDirectoryMap from "../utils/linkDirectoryMap";
+import TimeDistanceInfoOverlayBox from "../components/MapComponents/TimeDistanceInfoOverlayBox";
 
 const layerStyle: any = {
   id: "route",
@@ -62,9 +63,14 @@ const DowntownWalk: NextPage = () => {
           setArticleOverlay={setArticleOverlay}
         />
       )}
+      <TimeDistanceInfoOverlayBox
+        time="1h"
+        distanceKM="2.0"
+        distanceMI="1.24"
+      />
       <Link
         className="absolute top-10 left-10 z-10 rounded-lg bg-white px-8 py-4"
-        href={linkDirectoryMap.victoriaDowntownScenicWalkMap}
+        href={linkDirectoryMap.index}
       >
         Back
       </Link>
@@ -81,7 +87,6 @@ const DowntownWalk: NextPage = () => {
         interactiveLayerIds={[layerStyle.id]}
         mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
       >
-        <FullscreenControl />
         <Source id="my-data" type="geojson" data={downtown_walk_feature}>
           <Layer {...layerStyle} />
         </Source>

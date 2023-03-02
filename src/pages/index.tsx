@@ -27,16 +27,15 @@ const Home: NextPage = () => {
         <div className={styles.description}>
           <h2>A Walk To Remember</h2>
           <p>
-            Starting at Victoria Harbour, a scenic walk along the waterfront
-            awaits visitors in Victoria, BC. The path takes walkers along the
-            David Foster Path towards Fisherman's Wharf, offering breathtaking
-            views of the Inner Harbour, the Victoria Legislature Building, and
-            the iconic Empress Hotel. Visitors can spot various marine life such
-            as seals, otters, and birds on the way to the vibrant Fisherman's
-            Wharf, where they can indulge in fresh seafood, explore local shops
-            and enjoy the lively atmosphere. This walk is perfect for those
-            seeking a peaceful escape while soaking in the beauty of Victoria's
-            waterfront and experiencing the city's culture and history.
+            This path takes walkers along the David Foster Path towards
+            Fisherman's Wharf, offering breathtaking views of the Inner Harbour,
+            the Victoria Legislature Building, and the iconic Empress Hotel.
+            Visitors can spot various marine life such as seals, otters, and
+            birds on the way to the vibrant Fisherman's Wharf, where they can
+            indulge in fresh seafood, explore local shops and enjoy the lively
+            atmosphere. This walk is perfect for those seeking a peaceful escape
+            while soaking in the beauty of Victoria's waterfront and
+            experiencing the city's culture and history.
           </p>
         </div>
       </section>
@@ -122,7 +121,7 @@ const Home: NextPage = () => {
           mapAlt="fishermans wharf map preview"
           objectFit="object-[50%,70%]"
           title="Fishermans Wharf"
-          description="Fisherman's Wharf is a popular tourist destination located in Victoria, British Columbia, Canada. Originally a working fishing community, the wharf is now home to a variety of shops, restaurants, and activities. Visitors can sample fresh seafood, take a whale watching tour, rent kayaks or paddleboards, or simply stroll along the docks and watch the boats come and go. The wharf also features colorful floating homes, which have become a popular attraction in their own right. Whether you're looking for a bite to eat, a unique shopping experience, or a chance to get out on the water, Fisherman's Wharf offers something for everyone."
+          description="Originally a working fishing community, the wharf is now home to a variety of shops, restaurants, and activities. Visitors can sample fresh seafood, take a whale watching tour, rent kayaks or paddleboards, or simply stroll along the docks and watch the boats come and go. The wharf also features colorful floating homes, which have become a popular attraction in their own right. Whether you're looking for a bite to eat, a unique shopping experience, or a chance to get out on the water, Fisherman's Wharf offers something for everyone."
         />
       </section>
       <section id="route-buttons">
