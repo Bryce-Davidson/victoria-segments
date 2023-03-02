@@ -54,7 +54,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div style={{ height: "100vh" }}>
+    <div className="h-screen">
       {articleOverlay && (
         <ArticleOverlay
           articleOverlay={articleOverlay}
