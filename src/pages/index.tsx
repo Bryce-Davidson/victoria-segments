@@ -15,6 +15,7 @@ import ScrollblePhotoTray from "../components/ScrollablePhotoTray/ScrollablePhot
 import PhotoMarkers from "../components/PhotoMarkers";
 import DetailsPopup from "../components/MapComponents/DetailsPopup";
 import ArticleOverlay from "../components/MapComponents/ArticleOverlay";
+import { Feature, Point } from "geojson";
 
 const layerStyle: any = {
   id: "route",
@@ -30,10 +31,20 @@ const layerStyle: any = {
   },
 };
 
+interface photoPointProperties {
+  imgSrc: string;
+  title: string;
+  description: string;
+}
+
 const Home: NextPage = () => {
   const mapRef = useRef<MapRef>(null);
 
-  const [popupInfo, setPopupInfo] = useState<any>(null);
+  const [popupInfo, setPopupInfo] = useState<Feature<
+    Point,
+    photoPointProperties
+  > | null>(null);
+
   const [articleOverlay, setArticleOverlay] = useState<any>(true);
 
   const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);

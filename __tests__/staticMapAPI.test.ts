@@ -52,7 +52,7 @@ describe("Static Map API", () => {
         overlays: [point_1],
       });
       const staticImageUrl = request.url();
-      const file_name = point_1.geoJson.properties.photo_name.split(".")[0];
+      const file_name = point_1.geoJson.properties.imgSrc.split(".")[0];
       //   console.log(file_name);
       // console.log(staticImageUrl);
       await request.send().then((res) => {

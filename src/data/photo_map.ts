@@ -6,9 +6,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "1_harbour.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "1_harbour.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.36861427024508, 48.42268037775693],
@@ -18,9 +19,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "2_harbour.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "2_harbour.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.36854366719676, 48.42210538061829],
@@ -30,9 +32,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "3_harbour.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "3_harbour.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.36858633435301, 48.42264920972917],
@@ -42,9 +45,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "4_harbour.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "4_harbour.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.36931944381689, 48.42094224454095],
@@ -54,9 +58,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "5_harbour.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "5_harbour.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.36967020472727, 48.42089524448747],
@@ -66,9 +71,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "6_harbour.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "6_harbour.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.37046845667922, 48.42095476363559],
@@ -78,9 +84,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "7_harbour.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "7_harbour.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.37054092193111, 48.4209804039227],
@@ -90,9 +97,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "8_harbour.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "8_harbour.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.37071345427293, 48.42116283806183],
@@ -102,9 +110,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "9_manor.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "9_manor.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.37483094673297, 48.42198487255217],
@@ -114,9 +123,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "10_david_foster.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "10_david_foster.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.37515462637131, 48.42271733614703],
@@ -126,9 +136,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "11_david_foster.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "11_david_foster.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.37522986934854, 48.422873278983246],
@@ -138,9 +149,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "12_david_foster.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "12_david_foster.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.37561032338513, 48.423032874867914],
@@ -150,9 +162,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "13_david_foster.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "13_david_foster.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.37580818083588, 48.42381558880467],
@@ -162,9 +175,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "14_david_foster.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "14_david_foster.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.37578832977081, 48.42389534720641],
@@ -174,9 +188,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "15_david_foster.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "15_david_foster.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.3773858158236, 48.42422836408136],
@@ -186,9 +201,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "16_david_foster.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "16_david_foster.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.3791967620214, 48.42242536857549],
@@ -198,9 +214,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "18_fishermans_wharf.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "18_fishermans_wharf.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.38075184627816, 48.42281381103322],
@@ -210,9 +227,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "19_fishermans_wharf.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "19_fishermans_wharf.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.38087780117186, 48.42262757205066],
@@ -222,9 +240,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "20_fishermans_wharf.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "20_fishermans_wharf.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.38109214615795, 48.422623172691374],
@@ -234,9 +253,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "22_fishermans_wharf.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "22_fishermans_wharf.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.3818783896226, 48.422520817017784],
@@ -246,9 +266,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "23_fishermans_wharf.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "23_fishermans_wharf.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.38187508146078, 48.4225071360018],
@@ -258,9 +279,10 @@ const photo_map: any = {
     {
       type: "Feature",
       properties: {
-        photo_name: "24_fishermans_wharf.JPG",
-        "marker-size": "medium",
-        "marker-color": "#ff0000",
+        imgSrc: "24_fishermans_wharf.JPG",
+        title: "Victoria Harbour Parliment Building",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
       },
       geometry: {
         coordinates: [-123.38281438825483, 48.42275058785444],

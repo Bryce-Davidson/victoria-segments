@@ -25,7 +25,7 @@ export default function ArticleOverlay({
       <div className="mx-auto flex w-4/5 flex-wrap items-center justify-center gap-12">
         <Image
           className="h-fit w-fit"
-          src={articleOverlay.imgSrc ?? "/photos/1_harbour.JPG"}
+          src={"/photos/" + articleOverlay.imgSrc ?? "/photos/1_harbour.JPG"}
           alt={articleOverlay.imgAlt ?? "article overlay image"}
           width={500}
           height={500}

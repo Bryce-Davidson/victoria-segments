@@ -30,7 +30,7 @@ export default function DetailsPopup({
           alt="Oops"
           width={500}
           height={250}
-          src={"/photos/" + popupInfo.properties.photo_name}
+          src={"/photos/" + popupInfo.properties.imgSrc}
         />
         <div>
           <div className="my-4">
@@ -47,7 +47,7 @@ export default function DetailsPopup({
               <DirectionsIcon className="text-blue-700" />
             </button>
             <button
-              onClick={() => setArticleOverlay(popupInfo)}
+              onClick={() => setArticleOverlay({ ...popupInfo.properties })}
               className="mt-4 flex items-center gap-4 rounded-sm py-2 px-4 font-medium shadow-lg"
             >
               Read more

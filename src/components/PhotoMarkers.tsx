@@ -50,7 +50,7 @@ export default function PhotoMarkers({
                 width={50}
                 height={50}
                 className="mt-2"
-                src={"/photos/" + point?.properties?.photo_name}
+                src={"/photos/" + point?.properties?.imgSrc}
               />
             </div>
           </Marker>

@@ -70,7 +70,7 @@ function ScrollblePhotoTray({
                 width={275}
                 height={175}
                 alt="oops"
-                src={"/photos/" + photo?.properties?.photo_name}
+                src={"/photos/" + photo?.properties?.imgSrc}
               />
             </div>
           );
