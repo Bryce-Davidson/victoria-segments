@@ -99,7 +99,7 @@ const Home: NextPage = () => {
       </Map>
       <ScrollblePhotoTray
         setPopupInfo={setPopupInfo}
-        onClickMarker={handleMarkerClick}
+        onClickPhoto={handleMarkerClick}
       />
     </div>
   );

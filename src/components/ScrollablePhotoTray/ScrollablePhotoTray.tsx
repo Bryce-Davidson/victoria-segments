@@ -1,54 +1,34 @@
 import Image from "next/image";
 import photo_map from "../../data/photo_map";
-import styles from "./ScrollablePhotoTray.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import classNames from "../../lib/classNames";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function ScrollblePhotoTray({
-  onClickMarker,
+  onClickPhoto,
   setPopupInfo,
 }: {
-  onClickMarker: Function;
+  onClickPhoto: Function;
   setPopupInfo: Function;
 }) {
-  const [open, setOpen] = useState(true);
-
-  let string = open ? "px-4 py-1" : "p-5";
-
-  useEffect(() => {
-    console.log(open);
-  }, [open]);
+  const [open, setOpen] = useState<boolean>(true);
 
   return (
     <div className="fixed bottom-0 flex w-screen flex-col items-center justify-center">
       <button
-        className={"rounded-t-md bg-white " + string}
+        className={classNames(
+          "rounded-t-md bg-white",
+          open ? "px-4 py-1" : "p-5"
+        )}
         onClick={(event) => {
-          event.preventDefault();
           setOpen(!open);
         }}
       >
-        {open ? (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
-          </svg>
-        ) : (
-          "Photos"
-        )}
+        {open ? <ExpandMoreIcon fontSize="medium" /> : "Photos"}
       </button>
 
       <div
-        className={styles.media_scroller}
+        className="mb-4 block h-[25vh] w-screen overflow-x-auto overscroll-contain whitespace-nowrap bg-slate-300 bg-opacity-50"
         style={{
           display: open ? "block" : "none",
         }}
@@ -60,13 +40,14 @@ function ScrollblePhotoTray({
                 cursor: "pointer",
               }}
               key={index}
-              className={styles.media_element}
+              className="inline-block h-full p-4"
               onClick={() => {
-                onClickMarker(photo.geometry.coordinates);
+                onClickPhoto(photo.geometry.coordinates);
                 setPopupInfo(photo);
               }}
             >
               <Image
+                className="inline h-full w-auto rounded-sm object-cover"
                 width={275}
                 height={175}
                 alt="oops"
