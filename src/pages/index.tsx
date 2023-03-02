@@ -94,7 +94,8 @@ const Home: NextPage = () => {
           />
         </div>
       </section>
-      <section id="segment-details" className="my-20">
+      <section id="segment-details" className="my-16">
+        <h2 className="text-center text-2xl">Segment Details</h2>
         <SegmentDetail
           mainSrc="/photos/1_harbour.JPG"
           mainAlt="downtown victoria harbour"

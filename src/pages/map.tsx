@@ -69,7 +69,7 @@ const DowntownWalk: NextPage = () => {
         distanceMI="1.24"
       />
       <Link
-        className="absolute top-10 left-10 z-10 rounded-lg bg-white px-8 py-4"
+        className="absolute top-6 left-4 z-10 rounded-lg bg-white px-8 py-4 sm:top-10 sm:left-10"
         href={linkDirectoryMap.index}
       >
         Back

@@ -27,16 +27,19 @@ export default function DetailsPopup({
       longitude={Number(popupInfo.geometry.coordinates[0])}
       latitude={Number(popupInfo.geometry.coordinates[1])}
       maxWidth="1000px"
+      className="rounded-md"
       onClose={() => setPopupInfo(null)}
     >
       <div className="w-[20rem]">
-        <Image
-          className="max-h-52 w-full object-contain"
-          alt="Oops"
-          width={500}
-          height={250}
-          src={"/photos/" + popupInfo.properties.imgSrc}
-        />
+        <div className="rounded-md">
+          <Image
+            className="max-h-52 w-full rounded-md object-contain"
+            alt="Oops"
+            width={500}
+            height={250}
+            src={"/photos/" + popupInfo.properties.imgSrc}
+          />
+        </div>
         <div>
           <div className="my-4">
             <h2 className="text-xl">Lorem ipsum dolor, sit amet.</h2>
@@ -46,9 +49,9 @@ export default function DetailsPopup({
               nisi voluptatem, labore optio neque numquam!...
             </p>
           </div>
-          <div className="flex justify-between gap-8">
+          <div className="flex flex-wrap justify-between gap-8">
             <button
-              className="mt-4 flex items-center gap-4 rounded-sm bg-blue-100 py-2 px-4 font-medium shadow-lg"
+              className="mt-4 flex items-center gap-4 rounded-md bg-blue-100 py-2 px-4 font-medium"
               onClick={() => {
                 const lon = popupInfo.geometry.coordinates[0];
                 const lat = popupInfo.geometry.coordinates[1];
@@ -64,7 +67,7 @@ export default function DetailsPopup({
             </button>
             <button
               onClick={() => setArticleOverlay({ ...popupInfo.properties })}
-              className="mt-4 flex items-center gap-4 rounded-sm py-2 px-4 font-medium shadow-lg"
+              className="mt-4 flex items-center gap-4 rounded-md border border-stone-800 py-2 px-4 font-medium"
             >
               Read more
               <AspectRatioIcon />
