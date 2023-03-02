@@ -8,7 +8,6 @@ import InteractiveMapButton from "../components/Buttons/InteractiveMapButton";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import linkDirectoryMap from "../utils/linkDirectoryMap";
-import { link } from "fs";
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +16,7 @@ const Home: NextPage = () => {
         <div className={styles.hero_container}>
           <h1 className={styles.hero_image_title}>Downtown Victoria Scenic</h1>
           <Image
-            alt="downtown walk hero image"
+            alt="victoria downtown walk hero image"
             src={"/photos/1_harbour.JPG"}
             width={1280}
             height={720}
@@ -28,13 +27,16 @@ const Home: NextPage = () => {
         <div className={styles.description}>
           <h2>A Walk To Remember</h2>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
-            culpa error voluptas voluptates rem asperiores nisi harum autem odit
-            dignissimos alias veritatis reprehenderit quos quam dolorum quas
-            modi doloribus nulla ea iusto, debitis laboriosam optio. Nesciunt
-            cumque, autem dignissimos odio ad illo vel sint enim voluptates.
-            Rerum velit atque debitis. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Non, ut?
+            Starting at Victoria Harbour, a scenic walk along the waterfront
+            awaits visitors in Victoria, BC. The path takes walkers along the
+            David Foster Path towards Fisherman's Wharf, offering breathtaking
+            views of the Inner Harbour, the Victoria Legislature Building, and
+            the iconic Empress Hotel. Visitors can spot various marine life such
+            as seals, otters, and birds on the way to the vibrant Fisherman's
+            Wharf, where they can indulge in fresh seafood, explore local shops
+            and enjoy the lively atmosphere. This walk is perfect for those
+            seeking a peaceful escape while soaking in the beauty of Victoria's
+            waterfront and experiencing the city's culture and history.
           </p>
         </div>
       </section>
