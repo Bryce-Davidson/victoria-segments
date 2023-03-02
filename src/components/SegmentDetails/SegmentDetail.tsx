@@ -1,8 +1,8 @@
-import styles from "./SegmentDetail.module.css";
 import Image from "next/image";
 import ZoomOutMapIcon from "@mui/icons-material/ZoomOutMap";
 import Link from "next/link";
 import classNames from "../../lib/classNames";
+import linkDirectoryMap from "../../utils/linkDirectoryMap";
 
 export default function SegmentDetail({
   mainSrc,
@@ -41,7 +41,7 @@ export default function SegmentDetail({
         </p>
       </div>
       <div>
-        <Link href="/">
+        <Link href={linkDirectoryMap.victoriaDowntownScenicWalkMap}>
           <div className="relative">
             <div className="absolute bottom-4 right-4 rounded-md bg-white p-1">
               <ZoomOutMapIcon />

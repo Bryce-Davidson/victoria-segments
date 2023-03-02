@@ -1,5 +1,0 @@
-.segment_detail {
-  @apply mx-5 w-full p-3 sm:w-2/3;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
