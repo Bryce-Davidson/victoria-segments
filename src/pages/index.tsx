@@ -54,10 +54,12 @@ const Home: NextPage = () => {
   return (
     <div style={{ height: "100vh" }}>
       {articleOverlay && (
-        <ArticleOverlay setArticleOverlay={setArticleOverlay} />
+        <ArticleOverlay
+          articleOverlay={articleOverlay}
+          setArticleOverlay={setArticleOverlay}
+        />
       )}
       <Map
-        // onDrag={() => setPopupInfo(null)}
         ref={mapRef}
         initialViewState={{
           fitBoundsOptions: {
@@ -81,7 +83,11 @@ const Home: NextPage = () => {
         />
 
         {popupInfo && (
-          <DetailsPopup popupInfo={popupInfo} setPopupInfo={setPopupInfo} />
+          <DetailsPopup
+            popupInfo={popupInfo}
+            setPopupInfo={setPopupInfo}
+            setArticleOverlay={setArticleOverlay}
+          />
         )}
       </Map>
       <ScrollblePhotoTray

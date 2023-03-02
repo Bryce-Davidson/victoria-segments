@@ -6,9 +6,11 @@ import AspectRatioIcon from "@mui/icons-material/AspectRatio";
 export default function DetailsPopup({
   popupInfo,
   setPopupInfo,
+  setArticleOverlay,
 }: {
   popupInfo: any;
   setPopupInfo: Function;
+  setArticleOverlay: Function;
 }) {
   return (
     <Popup
@@ -17,7 +19,6 @@ export default function DetailsPopup({
         bottom: [0, -50],
       }}
       closeButton={false}
-      focusAfterOpen
       longitude={Number(popupInfo.geometry.coordinates[0])}
       latitude={Number(popupInfo.geometry.coordinates[1])}
       maxWidth="1000px"
@@ -45,7 +46,10 @@ export default function DetailsPopup({
               Directions
               <DirectionsIcon className="text-blue-700" />
             </button>
-            <button className="mt-4 flex items-center gap-4 rounded-sm py-2 px-4 font-medium shadow-lg">
+            <button
+              onClick={() => setArticleOverlay(popupInfo)}
+              className="mt-4 flex items-center gap-4 rounded-sm py-2 px-4 font-medium shadow-lg"
+            >
               Read more
               <AspectRatioIcon />
             </button>
