@@ -2,13 +2,7 @@ import { MAPBOX_PUBLIC_TOKEN } from "../utils/mapbox/tokens";
 import type { NextPage } from "next";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useState, useRef } from "react";
-import Map, {
-  FullscreenControl,
-  Source,
-  Layer,
-  Popup,
-  MapRef,
-} from "react-map-gl";
+import Map, { FullscreenControl, Source, Layer, MapRef } from "react-map-gl";
 import bbox from "@turf/bbox";
 import downtown_walk_feature from "../data/tracks";
 import ScrollblePhotoTray from "../components/ScrollablePhotoTray/ScrollablePhotoTray";
@@ -16,6 +10,7 @@ import PhotoMarkers from "../components/PhotoMarkers";
 import DetailsPopup from "../components/MapComponents/DetailsPopup";
 import ArticleOverlay from "../components/MapComponents/ArticleOverlay";
 import { Feature, Point } from "geojson";
+import Link from "next/link";
 
 const layerStyle: any = {
   id: "route",
@@ -70,6 +65,12 @@ const Home: NextPage = () => {
           setArticleOverlay={setArticleOverlay}
         />
       )}
+      <Link
+        className="absolute top-10 left-10 z-10 rounded-lg bg-white px-8 py-4"
+        href="/downtown-walk"
+      >
+        Back
+      </Link>
       <Map
         ref={mapRef}
         initialViewState={{
