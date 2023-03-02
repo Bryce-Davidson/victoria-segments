@@ -45,7 +45,7 @@ const Home: NextPage = () => {
     photoPointProperties
   > | null>(null);
 
-  const [articleOverlay, setArticleOverlay] = useState<any>(true);
+  const [articleOverlay, setArticleOverlay] = useState<any>(false);
 
   const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);
 
