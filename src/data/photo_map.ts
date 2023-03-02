@@ -1,5 +1,3 @@
-import { FeatureCollection, Point } from "geojson";
-
 const photo_map: any = {
   type: "FeatureCollection",
   features: [
