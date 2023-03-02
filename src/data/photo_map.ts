@@ -5,6 +5,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "1_harbour.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -18,6 +19,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "2_harbour.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -31,6 +33,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "3_harbour.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -44,6 +47,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "4_harbour.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -57,6 +61,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "5_harbour.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -70,6 +75,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "6_harbour.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -83,6 +89,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "7_harbour.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -96,6 +103,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "8_harbour.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -109,6 +117,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "9_manor.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -122,6 +131,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "10_david_foster.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -135,6 +145,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "11_david_foster.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -148,6 +159,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "12_david_foster.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -161,6 +173,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "13_david_foster.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -174,6 +187,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "14_david_foster.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -187,6 +201,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "15_david_foster.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -200,6 +215,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "16_david_foster.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -213,6 +229,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "18_fishermans_wharf.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -226,6 +243,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "19_fishermans_wharf.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -239,6 +257,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "20_fishermans_wharf.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -252,6 +271,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "22_fishermans_wharf.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -265,6 +285,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "23_fishermans_wharf.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
@@ -278,6 +299,7 @@ const photo_map: any = {
       type: "Feature",
       properties: {
         imgSrc: "24_fishermans_wharf.JPG",
+        imgAlt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",

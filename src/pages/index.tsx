@@ -28,25 +28,21 @@ const layerStyle: any = {
 
 interface photoPointProperties {
   imgSrc: string;
+  imgAlt: string;
   title: string;
   description: string;
 }
 
 const Home: NextPage = () => {
   const mapRef = useRef<MapRef>(null);
-
   const [popupInfo, setPopupInfo] = useState<Feature<
     Point,
     photoPointProperties
   > | null>(null);
-
-  const [articleOverlay, setArticleOverlay] = useState<any>(false);
+  const [articleOverlay, setArticleOverlay] =
+    useState<photoPointProperties | null>(null);
 
   const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);
-
-  function handleClusterClick(event: any) {
-    console.log(event.features);
-  }
 
   function handleMarkerClick(coords: [number, number]) {
     mapRef.current?.flyTo({
@@ -79,16 +75,15 @@ const Home: NextPage = () => {
           },
           bounds: [minLng, minLat, maxLng, maxLat],
         }}
-        onClick={handleClusterClick}
         style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         interactiveLayerIds={[layerStyle.id]}
         mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
       >
+        <FullscreenControl />
         <Source id="my-data" type="geojson" data={downtown_walk_feature}>
           <Layer {...layerStyle} />
         </Source>
-        <FullscreenControl />
         <PhotoMarkers
           setPopupInfo={setPopupInfo}
           handleMarkerClick={handleMarkerClick}

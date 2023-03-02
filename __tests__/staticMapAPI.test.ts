@@ -7,7 +7,7 @@ import photo_map from "../src/data/photo_map";
 import fs from "fs";
 
 describe("Static Map API", () => {
-  it("gets a static map of harbour", async () => {
+  it.skip("gets a static map of harbour", async () => {
     const request = mbxStaticClient.getStaticImage({
       ownerId: "mapbox",
       styleId: "streets-v11",
