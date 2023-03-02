@@ -3,6 +3,10 @@ import Image from "next/image";
 import DirectionsIcon from "@mui/icons-material/Directions";
 import AspectRatioIcon from "@mui/icons-material/AspectRatio";
 
+function formGoogleDirectionURL(lon: string, lat: string) {
+  return `https://www.google.com/maps/dir/current+location/${lat},${lon}`;
+}
+
 export default function DetailsPopup({
   popupInfo,
   setPopupInfo,
@@ -18,6 +22,7 @@ export default function DetailsPopup({
       offset={{
         bottom: [0, -50],
       }}
+      focusAfterOpen={false}
       closeButton={false}
       longitude={Number(popupInfo.geometry.coordinates[0])}
       latitude={Number(popupInfo.geometry.coordinates[1])}
@@ -42,7 +47,18 @@ export default function DetailsPopup({
             </p>
           </div>
           <div className="flex justify-between gap-8">
-            <button className="mt-4 flex items-center gap-4 rounded-sm bg-blue-100 py-2 px-4 font-medium shadow-lg">
+            <button
+              className="mt-4 flex items-center gap-4 rounded-sm bg-blue-100 py-2 px-4 font-medium shadow-lg"
+              onClick={() => {
+                const lon = popupInfo.geometry.coordinates[0];
+                const lat = popupInfo.geometry.coordinates[1];
+                window.open(
+                  formGoogleDirectionURL(lon, lat),
+                  "_blank",
+                  "noreferrer"
+                );
+              }}
+            >
               Directions
               <DirectionsIcon className="text-blue-700" />
             </button>
