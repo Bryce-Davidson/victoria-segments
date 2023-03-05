@@ -42,11 +42,13 @@ export default function DetailsPopup({
         </div>
         <div>
           <div className="my-4">
-            <h2 className="text-xl">Lorem ipsum dolor, sit amet.</h2>
+            <h2 className="text-xl">{popupInfo.properties.title}</h2>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, ad
-              delectus. Nostrum, ex laboriosam quis cupiditate et dicta corrupti
-              nisi voluptatem, labore optio neque numquam!...
+              {popupInfo.properties.description
+                .split(" ")
+                .splice(0, 20)
+                .join(" ")}
+              {"..."}
             </p>
           </div>
           <div className="flex flex-wrap justify-between gap-8">

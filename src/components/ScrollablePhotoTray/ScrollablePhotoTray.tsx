@@ -36,11 +36,8 @@ function ScrollblePhotoTray({
         {photo_map.features.map((photo: any, index: number) => {
           return (
             <div
-              style={{
-                cursor: "pointer",
-              }}
               key={index}
-              className="inline-block h-full p-4"
+              className="inline-block h-full cursor-pointer p-4"
               onClick={() => {
                 onClickPhoto(photo.geometry.coordinates);
                 setPopupInfo(photo);

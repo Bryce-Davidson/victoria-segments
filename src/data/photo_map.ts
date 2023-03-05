@@ -6,9 +6,9 @@ const photo_map: any = {
       properties: {
         imgSrc: "1_harbour.JPG",
         imgAlt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        title: "Victoria Inner Harbour",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "The Inner Harbour in Victoria, BC is a lively and picturesque waterfront area that serves as a popular destination for visitors. With the iconic Empress Hotel, and numerous shops, nearby restaurants, and attractions, there's always something to see and do. Visitors can watch seaplanes take off and land, enjoy street performers, and explore nearby attractions such as the Royal BC Museum.",
       },
       geometry: {
         coordinates: [-123.36861427024508, 48.42268037775693],
@@ -20,9 +20,9 @@ const photo_map: any = {
       properties: {
         imgSrc: "2_harbour.JPG",
         imgAlt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        title: "Boats in the Inner Harbour",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "The boats in the harbour of Victoria, BC offer a diverse range of vessels to admire, from working fishing boats to luxury yachts. Visitors can also see tall ships and tour boats, and the types and numbers of boats vary throughout the year depending on the season and economic climate of the area.",
       },
       geometry: {
         coordinates: [-123.36854366719676, 48.42210538061829],
@@ -34,9 +34,9 @@ const photo_map: any = {
       properties: {
         imgSrc: "3_harbour.JPG",
         imgAlt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        title: "Parliment Buildings",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "The Parliment Buildings in Victoria, BC is a stunning example of neoclassical architecture that houses the Legislative Assembly of British Columbia. Visitors can admire its beautiful grounds and prominent dome, and depending on the season, witness a range of decor, from festive lights during the holiday season to beautiful gardens in the spring and summer.",
       },
       geometry: {
         coordinates: [-123.36858633435301, 48.42264920972917],

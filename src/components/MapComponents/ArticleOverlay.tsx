@@ -22,9 +22,9 @@ export default function ArticleOverlay({
         fontSize="large"
         onClick={() => setArticleOverlay(false)}
       />
-      <div className="mx-auto flex w-4/5 flex-wrap items-center justify-center gap-12">
+      <div className="mx-auto flex h-fit w-auto flex-wrap items-center justify-center gap-12">
         <Image
-          className="h-auto w-fit flex-initial"
+          className="max-h-[80vh] w-auto flex-initial object-contain"
           src={"/photos/" + articleOverlay.imgSrc ?? "/photos/1_harbour.JPG"}
           alt={articleOverlay.imgAlt ?? "article overlay image"}
           width={500}
