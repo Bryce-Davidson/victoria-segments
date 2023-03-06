@@ -3,7 +3,7 @@ import downtown_walk_path from "../src/data/overlays/downtown_walk";
 import harbour_segment from "../src/data/overlays/harbour_segment";
 import david_foster_segment from "../src/data/overlays/david_foster_segment";
 import fishermans_wharf_segment from "../src/data/overlays/fishermans_wharf_segment";
-import photo_map from "../src/data/photo_map";
+import { downtown_scenic_walk_photos } from "../src/data/downtown_scenic_walk";
 import fs from "fs";
 
 describe("Static Map API", () => {
@@ -38,9 +38,9 @@ describe("Static Map API", () => {
   });
 
   it.skip("gets a static map for a point with a marker", async () => {
-    for (let i = 0; i < photo_map.features.length; i++) {
+    for (let i = 0; i < downtown_scenic_walk_photos.features.length; i++) {
       const point_1: any = {
-        geoJson: photo_map.features[i],
+        geoJson: downtown_scenic_walk_photos.features[i],
       };
       const request = mbxStaticClient.getStaticImage({
         ownerId: "mapbox",

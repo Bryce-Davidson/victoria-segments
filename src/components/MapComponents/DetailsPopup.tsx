@@ -34,10 +34,10 @@ export default function DetailsPopup({
         <div className="rounded-md">
           <Image
             className="max-h-52 w-full rounded-md object-contain"
-            alt="Oops"
+            alt={popupInfo.properties.img_alt}
             width={500}
             height={250}
-            src={"/photos/" + popupInfo.properties.imgSrc}
+            src={"/photos/" + popupInfo.properties.img_src}
           />
         </div>
         <div>

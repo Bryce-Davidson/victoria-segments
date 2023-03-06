@@ -1,5 +1,4 @@
 import styles from "./PhotoGallery.module.css";
-import photo_map from "../../data/photo_map";
 
 export default function PhotoGallery() {
   return (

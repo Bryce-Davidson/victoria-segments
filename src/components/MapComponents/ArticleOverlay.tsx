@@ -4,8 +4,8 @@ import Image from "next/image";
 interface articleOverlayProps {
   title: string;
   description?: string;
-  imgSrc: string;
-  imgAlt: string;
+  img_src: string;
+  img_alt: string;
 }
 
 export default function ArticleOverlay({
@@ -25,8 +25,8 @@ export default function ArticleOverlay({
       <div className="mx-auto flex h-fit w-auto flex-wrap items-center justify-center gap-12">
         <Image
           className="max-h-[80vh] w-auto flex-initial object-contain"
-          src={"/photos/" + articleOverlay.imgSrc ?? "/photos/1_harbour.JPG"}
-          alt={articleOverlay.imgAlt ?? "article overlay image"}
+          src={"/photos/" + articleOverlay.img_src ?? "/photos/1_harbour.JPG"}
+          alt={articleOverlay?.img_alt ?? "article overlay image"}
           width={500}
           height={500}
         />

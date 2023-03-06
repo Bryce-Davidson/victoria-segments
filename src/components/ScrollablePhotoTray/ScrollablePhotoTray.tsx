@@ -1,5 +1,5 @@
 import Image from "next/image";
-import photo_map from "../../data/photo_map";
+import { downtown_scenic_walk_photos } from "../../data/downtown_scenic_walk";
 import { useState } from "react";
 import classNames from "../../lib/classNames";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -33,26 +33,28 @@ function ScrollblePhotoTray({
           display: open ? "block" : "none",
         }}
       >
-        {photo_map.features.map((photo: any, index: number) => {
-          return (
-            <div
-              key={index}
-              className="inline-block h-full cursor-pointer p-4"
-              onClick={() => {
-                onClickPhoto(photo.geometry.coordinates);
-                setPopupInfo(photo);
-              }}
-            >
-              <Image
-                className="inline h-full w-auto rounded-sm object-cover"
-                width={275}
-                height={175}
-                alt="oops"
-                src={"/photos/" + photo?.properties?.imgSrc}
-              />
-            </div>
-          );
-        })}
+        {downtown_scenic_walk_photos.features.map(
+          (photo: any, index: number) => {
+            return (
+              <div
+                key={index}
+                className="inline-block h-full cursor-pointer p-4"
+                onClick={() => {
+                  onClickPhoto(photo.geometry.coordinates);
+                  setPopupInfo(photo);
+                }}
+              >
+                <Image
+                  className="inline h-full w-auto rounded-sm object-cover"
+                  width={275}
+                  height={175}
+                  alt="oops"
+                  src={"/photos/" + photo?.properties?.img_src}
+                />
+              </div>
+            );
+          }
+        )}
       </div>
     </div>
   );

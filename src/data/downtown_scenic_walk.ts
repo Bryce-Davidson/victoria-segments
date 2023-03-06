@@ -1,7 +1,7 @@
-import type { GeoPhotos } from "./content_types";
+import type { GeoPhotos } from "./content";
 import type { MultiLineString, Feature } from "geojson";
 
-export const downtown_walk_feature: Feature<MultiLineString, {}> = {
+export const downtown_scenic_walk_route: Feature<MultiLineString, {}> = {
   type: "Feature",
   properties: {},
   geometry: {
@@ -108,7 +108,7 @@ export const downtown_walk_feature: Feature<MultiLineString, {}> = {
   },
 };
 
-export const downtown_scenic_walk_geo_photos: GeoPhotos = {
+export const downtown_scenic_walk_photos: GeoPhotos = {
   type: "FeatureCollection",
   features: [
     {

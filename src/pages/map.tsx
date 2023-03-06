@@ -4,7 +4,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { useState, useRef } from "react";
 import Map, { Source, Layer, MapRef } from "react-map-gl";
 import bbox from "@turf/bbox";
-import downtown_walk_feature from "../data/tracks";
+import { downtown_scenic_walk_route } from "../data/downtown_scenic_walk";
 import ScrollblePhotoTray from "../components/ScrollablePhotoTray/ScrollablePhotoTray";
 import PhotoMarkers from "../components/PhotoMarkers";
 import DetailsPopup from "../components/MapComponents/DetailsPopup";
@@ -13,38 +13,19 @@ import { Feature, Point } from "geojson";
 import Link from "next/link";
 import linkDirectoryMap from "../utils/linkDirectoryMap";
 import TimeDistanceInfoOverlayBox from "../components/MapComponents/TimeDistanceInfoOverlayBox";
-
-const layerStyle: any = {
-  id: "route",
-  type: "line",
-  source: "route",
-  layout: {
-    "line-join": "round",
-    "line-cap": "round",
-  },
-  paint: {
-    "line-color": "#FFA500",
-    "line-width": 4,
-  },
-};
-
-interface photoPointProperties {
-  imgSrc: string;
-  imgAlt: string;
-  title: string;
-  description: string;
-}
+import { GeoPhotoProperties } from "../data/content";
+import walk_layer_style from "../layer_styles/walk_layer_style";
 
 const DowntownWalk: NextPage = () => {
   const mapRef = useRef<MapRef>(null);
   const [popupInfo, setPopupInfo] = useState<Feature<
     Point,
-    photoPointProperties
+    GeoPhotoProperties
   > | null>(null);
   const [articleOverlay, setArticleOverlay] =
-    useState<photoPointProperties | null>(null);
+    useState<GeoPhotoProperties | null>(null);
 
-  const [minLng, minLat, maxLng, maxLat] = bbox(downtown_walk_feature);
+  const [minLng, minLat, maxLng, maxLat] = bbox(downtown_scenic_walk_route);
 
   function handleMarkerClick(coords: [number, number]) {
     mapRef.current?.flyTo({
@@ -84,11 +65,11 @@ const DowntownWalk: NextPage = () => {
         }}
         style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
-        interactiveLayerIds={[layerStyle.id]}
+        interactiveLayerIds={[walk_layer_style.id]}
         mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
       >
-        <Source id="my-data" type="geojson" data={downtown_walk_feature}>
-          <Layer {...layerStyle} />
+        <Source id="my-data" type="geojson" data={downtown_scenic_walk_route}>
+          <Layer {...walk_layer_style} />
         </Source>
         <PhotoMarkers
           setPopupInfo={setPopupInfo}
