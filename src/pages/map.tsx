@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useState, useRef } from "react";
 import bbox from "@turf/bbox";
-import Map, { Source, Layer, MapRef } from "react-map-gl";
+import { MapRef, Map, Source, Layer } from "react-map-gl";
 import ScrollblePhotoTray from "../components/ScrollablePhotoTray/ScrollablePhotoTray";
 import PhotoMarkers from "../components/PhotoMarkers";
 import DetailsPopup from "../components/MapComponents/DetailsPopup";
