@@ -2,7 +2,7 @@ import Image from "next/image";
 import ZoomOutMapIcon from "@mui/icons-material/ZoomOutMap";
 import Link from "next/link";
 import classNames from "../../lib/classNames";
-import linkDirectoryMap from "../../utils/linkDirectoryMap";
+import linkDirectoryMap from "../../utils/link_directory_map";
 
 export default function SegmentDetail({
   mainSrc,

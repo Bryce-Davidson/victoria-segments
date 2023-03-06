@@ -22,8 +22,6 @@ export default function PhotoMarkers({
               latitude={point.geometry.coordinates[1]}
               anchor="bottom"
               onClick={(e) => {
-                // If we let the click event propagate to the map, it will immediately close the popup
-                // with `closeOnClick: true`
                 const coords: any = point.geometry.coordinates;
                 setPopupInfo(point);
                 handleMarkerClick(coords);

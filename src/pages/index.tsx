@@ -7,7 +7,7 @@ import RouteOutlinedIcon from "@mui/icons-material/RouteOutlined";
 import InteractiveMapButton from "../components/Buttons/InteractiveMapButton";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import IosShareIcon from "@mui/icons-material/IosShare";
-import linkDirectoryMap from "../utils/linkDirectoryMap";
+import linkDirectoryMap from "../utils/link_directory_map";
 
 const Home: NextPage = () => {
   return (

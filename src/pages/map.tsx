@@ -2,19 +2,20 @@ import { MAPBOX_PUBLIC_TOKEN } from "../utils/mapbox/tokens";
 import type { NextPage } from "next";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useState, useRef } from "react";
-import Map, { Source, Layer, MapRef } from "react-map-gl";
 import bbox from "@turf/bbox";
-import { downtown_scenic_walk_route } from "../data/downtown_scenic_walk";
+import Map, { Source, Layer, MapRef } from "react-map-gl";
 import ScrollblePhotoTray from "../components/ScrollablePhotoTray/ScrollablePhotoTray";
 import PhotoMarkers from "../components/PhotoMarkers";
 import DetailsPopup from "../components/MapComponents/DetailsPopup";
 import ArticleOverlay from "../components/MapComponents/ArticleOverlay";
-import { Feature, Point } from "geojson";
 import Link from "next/link";
-import linkDirectoryMap from "../utils/linkDirectoryMap";
+import linkDirectoryMap from "../utils/link_directory_map";
 import TimeDistanceInfoOverlayBox from "../components/MapComponents/TimeDistanceInfoOverlayBox";
-import { GeoPhotoProperties } from "../data/content";
+import { downtown_scenic_walk_route } from "../data/downtown_scenic_walk";
 import walk_layer_style from "../layer_styles/walk_layer_style";
+
+import type { GeoPhotoProperties } from "../data/content";
+import type { Feature, Point } from "geojson";
 
 const DowntownWalk: NextPage = () => {
   const mapRef = useRef<MapRef>(null);
