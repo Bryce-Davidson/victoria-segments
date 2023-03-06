@@ -1,8 +1,8 @@
 import mbxStaticClient from "../src/utils/mapbox/staticClient";
-import downtown_walk_path from "../src/data/downtown_walk";
-import harbour_segment from "../src/data/harbour_segment";
-import david_foster_segment from "../src/data/david_foster_segment";
-import fishermans_wharf_segment from "../src/data/fishermans_wharf_segment";
+import downtown_walk_path from "../src/data/overlays/downtown_walk";
+import harbour_segment from "../src/data/overlays/harbour_segment";
+import david_foster_segment from "../src/data/overlays/david_foster_segment";
+import fishermans_wharf_segment from "../src/data/overlays/fishermans_wharf_segment";
 import photo_map from "../src/data/photo_map";
 import fs from "fs";
 
