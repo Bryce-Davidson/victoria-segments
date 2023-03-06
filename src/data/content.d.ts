@@ -7,4 +7,9 @@ export interface GeoPhotoProperties {
   img_alt: string;
 }
 
+export interface GeoRouteProperties {
+  title: string;
+  description: string;
+}
+
 export type GeoPhotos = FeatureCollection<Point, GeoPhotoProperties>;

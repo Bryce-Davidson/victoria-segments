@@ -1,9 +1,16 @@
-import type { GeoPhotos } from "./content";
+import type { GeoPhotos, GeoRouteProperties } from "./content";
 import type { MultiLineString, Feature } from "geojson";
 
-export const downtown_scenic_walk_route: Feature<MultiLineString, {}> = {
+export const downtown_scenic_walk_route: Feature<
+  MultiLineString,
+  GeoRouteProperties
+> = {
   type: "Feature",
-  properties: {},
+  properties: {
+    title: "A Walk to Remember",
+    description:
+      "This path takes walkers along the David Foster Path towards Fisherman's Wharf, offering breathtaking views of the Inner Harbour, the Victoria Legislature Building, and the iconic Empress Hotel. Visitors can spot various marine life such as seals, otters, and birds on the way to the vibrant Fisherman's Wharf, where they can indulge in fresh seafood, explore local shops and enjoy the lively atmosphere. This walk is perfect for those seeking a peaceful escape while soaking in the beauty of Victoria's waterfront and experiencing the city's culture and history.",
+  },
   geometry: {
     type: "MultiLineString",
     coordinates: [

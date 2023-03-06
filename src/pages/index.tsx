@@ -8,6 +8,7 @@ import InteractiveMapButton from "../components/Buttons/InteractiveMapButton";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import linkDirectoryMap from "../utils/link_directory_map";
+import { downtown_scenic_walk_route } from "../data/downtown_scenic_walk";
 
 const Home: NextPage = () => {
   return (
@@ -25,18 +26,8 @@ const Home: NextPage = () => {
       </section>
       <section id="route-description">
         <div className={styles.description}>
-          <h2>A Walk To Remember</h2>
-          <p>
-            This path takes walkers along the David Foster Path towards
-            Fisherman's Wharf, offering breathtaking views of the Inner Harbour,
-            the Victoria Legislature Building, and the iconic Empress Hotel.
-            Visitors can spot various marine life such as seals, otters, and
-            birds on the way to the vibrant Fisherman's Wharf, where they can
-            indulge in fresh seafood, explore local shops and enjoy the lively
-            atmosphere. This walk is perfect for those seeking a peaceful escape
-            while soaking in the beauty of Victoria's waterfront and
-            experiencing the city's culture and history.
-          </p>
+          <h2>{downtown_scenic_walk_route.properties.title}</h2>
+          <p>{downtown_scenic_walk_route.properties.description}</p>
         </div>
       </section>
       <section id="featured-photos" className={styles.featured_photos_tray}>
