@@ -13,8 +13,8 @@ export default function DetailsPopup({
   setArticleOverlay,
 }: {
   popupInfo: any;
-  setPopupInfo: Function;
-  setArticleOverlay: Function;
+  setPopupInfo: (status: any) => void;
+  setArticleOverlay: (status: any) => void;
 }) {
   return (
     <Popup

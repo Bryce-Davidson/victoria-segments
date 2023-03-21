@@ -1,4 +1,4 @@
-import { GeoJsonOverlay } from "@mapbox/mapbox-sdk/services/static";
+import { type GeoJsonOverlay } from "@mapbox/mapbox-sdk/services/static";
 
 const fishermans_wharf_segment: GeoJsonOverlay = {
   geoJson: {

@@ -1,4 +1,6 @@
-const walk_layer_style: any = {
+import { type LayerProps } from "react-map-gl";
+
+const walk_layer_style: LayerProps = {
   id: "route",
   type: "line",
   source: "route",

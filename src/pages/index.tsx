@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { type NextPage } from "next";
 import styles from "../styles/downtown-walk.module.css";
 import Image from "next/image";
 import SegmentDetail from "../components/SegmentDetails/BasicSegmentDetail";
@@ -12,7 +12,7 @@ import {
   downtown_scenic_walk_route,
   downtown_scenic_walk_basic_segment_details,
 } from "../data/downtown_scenic_walk";
-import { BasicSegmentDetailProps } from "../data/content";
+import { type BasicSegmentDetailProps } from "../data/content";
 
 const Home: NextPage = () => {
   return (

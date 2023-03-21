@@ -1,4 +1,4 @@
-import type { Point, Feature, FeatureCollection } from "geojson";
+import type { Point, FeatureCollection } from "geojson";
 
 export interface GeoPhotoProperties {
   title: string;

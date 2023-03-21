@@ -1,5 +1,6 @@
 import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
+import { type GeoPhotoProperties } from "../../data/content";
 
 interface articleOverlayProps {
   title: string;
@@ -13,14 +14,14 @@ export default function ArticleOverlay({
   setArticleOverlay,
 }: {
   articleOverlay: articleOverlayProps;
-  setArticleOverlay: Function;
+  setArticleOverlay: (status: GeoPhotoProperties | null) => void;
 }) {
   return (
     <div className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-white bg-opacity-90">
       <CloseIcon
         className="absolute right-12 top-12 hover:cursor-pointer"
         fontSize="large"
-        onClick={() => setArticleOverlay(false)}
+        onClick={() => setArticleOverlay(null)}
       />
       <div className="mx-auto flex h-fit w-auto flex-wrap items-center justify-center gap-12">
         <Image
