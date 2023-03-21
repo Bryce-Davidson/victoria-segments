@@ -447,7 +447,7 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       properties: {
         img_src: "24_fishermans_wharf.JPG",
         img_alt: "mexican seafood stand on fishermans wharf",
-        title: "Mexican Seasfood",
+        title: "Mexican Seafood",
         description:
           "Looking for some delicious Mexican seafood? Look no further than this restaurant located in the heart of Victoria. With fresh, flavorful dishes made using traditional techniques and local ingredients, it's the perfect spot for lunch or dinner. Don't miss their famous fish tacos or ceviche, and be sure to wash it all down with a refreshing margarita or cold beer.",
       },
