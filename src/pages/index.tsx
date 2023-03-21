@@ -95,6 +95,7 @@ const Home: NextPage = () => {
           (detail: BasicSegmentDetailProps, index: number) => {
             return (
               <SegmentDetail
+                key={index}
                 main_src={detail.main_src}
                 main_alt={detail.main_alt}
                 map_preview_src={detail.map_preview_src}

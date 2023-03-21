@@ -33,7 +33,7 @@ export default function DetailsPopup({
       <div className="w-[20rem]">
         <div className="rounded-md">
           <Image
-            className="max-h-52 w-full rounded-md object-contain"
+            className="max-h-32 w-full object-cover sm:max-h-52 sm:object-contain"
             alt={popupInfo.properties.img_alt}
             width={500}
             height={250}

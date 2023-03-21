@@ -30,7 +30,7 @@ export default function ArticleOverlay({
           width={500}
           height={500}
         />
-        <div className="max-w-[50ch] flex-auto">
+        <div className="max-w-[50ch] flex-auto px-10 sm:px-0">
           <h2 className="text-3xl">{articleOverlay.title ?? "Title"}</h2>
           <p className="mt-8">
             {articleOverlay.description ??
