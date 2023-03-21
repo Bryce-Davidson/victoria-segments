@@ -1,14 +1,18 @@
-import { NextPage } from "next";
+import { type NextPage } from "next";
 import styles from "../styles/downtown-walk.module.css";
 import Image from "next/image";
-import SegmentDetail from "../components/SegmentDetails/SegmentDetail";
+import SegmentDetail from "../components/SegmentDetails/BasicSegmentDetail";
 import AlarmAddRoundedIcon from "@mui/icons-material/AlarmAddRounded";
 import RouteOutlinedIcon from "@mui/icons-material/RouteOutlined";
 import InteractiveMapButton from "../components/Buttons/InteractiveMapButton";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import linkDirectoryMap from "../utils/link_directory_map";
-import { downtown_scenic_walk_route } from "../data/downtown_scenic_walk";
+import {
+  downtown_scenic_walk_route,
+  downtown_scenic_walk_basic_segment_details,
+} from "../data/downtown_scenic_walk";
+import { type BasicSegmentDetailProps } from "../data/content";
 
 const Home: NextPage = () => {
   return (
@@ -87,34 +91,22 @@ const Home: NextPage = () => {
       </section>
       <section id="segment-details" className="my-16">
         <h2 className="text-center text-2xl">Segment Details</h2>
-        <SegmentDetail
-          main_src="/photos/1_harbour.JPG"
-          main_alt="downtown victoria harbour"
-          map_preview_src="/previews/0_harbour_segment.png"
-          map_preview_alt="preview map"
-          title="Victoria Harbour"
-          description="Victoria's Inner Harbour is a popular tourist destination located on Vancouver Island in British Columbia, Canada. The harbour, originally a trading post established by the Hudson's Bay Company in the 1800s, is now home to a variety of attractions. One of the most popular is the stunning Fairmont Empress Hotel, which has been a landmark of Victoria's Inner Harbour for over a century. Visitors can also enjoy a variety of restaurants, shops, and museums, including the Royal BC Museum and the Maritime Museum of British Columbia. The harbour is also a hub for boat tours, including whale watching tours and seaplane adventures."
-        />
-        <hr className="mx-auto w-1/2 border border-gray-500" />
-        <SegmentDetail
-          main_src="/photos/11_david_foster.JPG"
-          main_alt="david foster path"
-          map_preview_src="/previews/0_david_foster_segment.png"
-          map_preview_alt="david foster path preview"
-          object_fit="object-[50%,60%]"
-          title="David Foster Path"
-          description="The David Foster Walking Path is a popular attraction in Victoria, British Columbia, Canada. Named after the famous Canadian musician, the path spans the length of the city's scenic waterfront, offering stunning views of the ocean and the Victoria's inner harbour. The path also features several public art installations and historical landmarks, such as views of Empress Hotel. Whether you're a music lover or simply looking for a picturesque stroll, the David Foster Walking Path offers a unique way to experience Victoria's rich culture and natural beauty."
-        />
-        <hr className="mx-auto w-1/2 border border-gray-500" />
-        <SegmentDetail
-          main_src="/photos/22_fishermans_wharf.JPG"
-          main_alt="fishermans wharf"
-          map_preview_src="/previews/0_fishermans_wharf_segment.png"
-          map_preview_alt="fishermans wharf map preview"
-          object_fit="object-[50%,70%]"
-          title="Fishermans Wharf"
-          description="Originally a working fishing community, the wharf is now home to a variety of shops, restaurants, and activities. Visitors can sample fresh seafood, take a whale watching tour, rent kayaks or paddleboards, or simply stroll along the docks and watch the boats come and go. The wharf also features colorful floating homes, which have become a popular attraction in their own right. Whether you're looking for a bite to eat, a unique shopping experience, or a chance to get out on the water, Fisherman's Wharf offers something for everyone."
-        />
+        {downtown_scenic_walk_basic_segment_details.map(
+          (detail: BasicSegmentDetailProps, index: number) => {
+            return (
+              <SegmentDetail
+                key={index}
+                main_src={detail.main_src}
+                main_alt={detail.main_alt}
+                map_preview_src={detail.map_preview_src}
+                map_preview_alt={detail.map_preview_alt}
+                title={detail.title}
+                description={detail.description}
+                object_fit={detail.object_fit}
+              />
+            );
+          }
+        )}
       </section>
       <section id="route-buttons">
         <div className="mb-20 flex w-full flex-row-reverse justify-center gap-4 bg-slate-100 py-10 shadow-inner">

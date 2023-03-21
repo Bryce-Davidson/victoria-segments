@@ -3,18 +3,9 @@ import ZoomOutMapIcon from "@mui/icons-material/ZoomOutMap";
 import Link from "next/link";
 import classNames from "../../lib/classNames";
 import linkDirectoryMap from "../../utils/link_directory_map";
+import type { BasicSegmentDetailProps } from "../../data/content";
 
-interface SegmentDetailProps {
-  main_src: string;
-  main_alt: string;
-  map_preview_src: string;
-  map_preview_alt: string;
-  object_fit?: string;
-  title?: string;
-  description?: string;
-}
-
-export default function SegmentDetail({
+export default function BasicSegmentDetail({
   main_src,
   main_alt,
   map_preview_src,
@@ -22,7 +13,7 @@ export default function SegmentDetail({
   object_fit,
   title,
   description,
-}: SegmentDetailProps) {
+}: BasicSegmentDetailProps) {
   return (
     <article className="mx-4 mt-10 grid grid-cols-1 grid-rows-[1fr_0.5fr_1fr] gap-8 sm:mx-auto sm:w-2/3 lg:grid-cols-2 lg:grid-rows-[1fr,_0.75fr]">
       <Image

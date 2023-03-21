@@ -1,5 +1,42 @@
-import type { GeoPhotos, GeoRouteProperties } from "./content";
+import type {
+  GeoPhotos,
+  GeoRouteProperties,
+  BasicSegmentDetailProps,
+} from "./content";
 import type { MultiLineString, Feature } from "geojson";
+
+export const downtown_scenic_walk_basic_segment_details: BasicSegmentDetailProps[] =
+  [
+    {
+      main_src: "/photos/1_harbour.JPG",
+      main_alt: "downtown victoria harbour",
+      map_preview_src: "/previews/0_harbour_segment.png",
+      map_preview_alt: "preview map",
+      title: "Victoria Harbour",
+      description:
+        "Victoria's Inner Harbour is a popular tourist destination located on Vancouver Island in British Columbia, Canada. The harbour, originally a trading post established by the Hudson's Bay Company in the 1800s, is now home to a variety of attractions. One of the most popular is the stunning Fairmont Empress Hotel, which has been a landmark of Victoria's Inner Harbour for over a century. Visitors can also enjoy a variety of restaurants, shops, and museums, including the Royal BC Museum and the Maritime Museum of British Columbia. The harbour is also a hub for boat tours, including whale watching tours and seaplane adventures.",
+    },
+    {
+      main_src: "/photos/11_david_foster.JPG",
+      main_alt: "david foster path",
+      map_preview_src: "/previews/0_david_foster_segment.png",
+      map_preview_alt: "david foster path preview",
+      object_fit: "object-[50%,60%]",
+      title: "David Foster Path",
+      description:
+        "The David Foster Walking Path is a popular attraction in Victoria, British Columbia, Canada. Named after the famous Canadian musician, the path spans the length of the city's scenic waterfront, offering stunning views of the ocean and the Victoria's inner harbour. The path also features several public art installations and historical landmarks, such as views of Empress Hotel. Whether you're a music lover or simply looking for a picturesque stroll, the David Foster Walking Path offers a unique way to experience Victoria's rich culture and natural beauty.",
+    },
+    {
+      main_src: "/photos/22_fishermans_wharf.JPG",
+      main_alt: "fishermans wharf",
+      map_preview_src: "/previews/0_fishermans_wharf_segment.png",
+      map_preview_alt: "fishermans wharf map preview",
+      object_fit: "object-[50%,70%]",
+      title: "Fishermans Wharf",
+      description:
+        "Originally a working fishing community, the wharf is now home to a variety of shops, restaurants, and activities. Visitors can sample fresh seafood, take a whale watching tour, rent kayaks or paddleboards, or simply stroll along the docks and watch the boats come and go. The wharf also features colorful floating homes, which have become a popular attraction in their own right. Whether you're looking for a bite to eat, a unique shopping experience, or a chance to get out on the water, Fisherman's Wharf offers something for everyone.",
+    },
+  ];
 
 export const downtown_scenic_walk_route: Feature<
   MultiLineString,
@@ -165,9 +202,9 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       properties: {
         img_src: "4_harbour.JPG",
         img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        title: "Empress Hotel",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "The Empress Hotel in Victoria, BC Canada is a luxurious and iconic landmark that boasts a rich history and a prime location in the heart of the city. Built in 1908, this stunning property features elegant architecture and charming details that transport guests back to the golden age of travel.",
       },
       geometry: {
         coordinates: [-123.36931944381689, 48.42094224454095],
@@ -181,7 +218,7 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
         img_alt: "1_harbour.JPG",
         title: "Victoria Harbour Parliment Building",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "The Steamship Grill and Bar in Victoria, BC Canada is a unique and charming restaurant that offers a one-of-a-kind dining experience. Housed in a historic steamship terminal building dating back to 1924, the restaurant features stunning views of Victoria's Inner Harbour. Guests can choose to dine inside the beautifully restored building or enjoy the stunning views from the outdoor patio. In addition to its exceptional cuisine and atmosphere, the Steamship Grill and Bar also hosts live music performances and events throughout the year, making it a popular destination for locals and visitors alike.",
       },
       geometry: {
         coordinates: [-123.36967020472727, 48.42089524448747],
@@ -191,25 +228,11 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
     {
       type: "Feature",
       properties: {
-        img_src: "6_harbour.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
-        description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
-      },
-      geometry: {
-        coordinates: [-123.37046845667922, 48.42095476363559],
-        type: "Point",
-      },
-    },
-    {
-      type: "Feature",
-      properties: {
         img_src: "7_harbour.JPG",
         img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        title: "Lemonade Stand",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "Surrounded by stunning views of the harbor and passing boats, the lemon-shaped lemonade stand is the perfect spot to take a break from your sightseeing and quench your thirst on a sunny day. Whether you're a local or a visitor, this stand is a must-visit for a refreshing taste of summer in Victoria.",
       },
       geometry: {
         coordinates: [-123.37054092193111, 48.4209804039227],
@@ -221,9 +244,9 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       properties: {
         img_src: "8_harbour.JPG",
         img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        title: "Black Ball Ferry Terminal",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "The Black Ball Ferry Terminal in Victoria, BC is a bustling hub of activity as passengers embark on the journey across the Salish Sea to Port Angeles, Washington.",
       },
       geometry: {
         coordinates: [-123.37071345427293, 48.42116283806183],
@@ -235,9 +258,9 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       properties: {
         img_src: "9_manor.JPG",
         img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        title: "Huntingdon Manor Hotel",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "Nestled in the heart of Victoria's historic James Bay neighborhood, the Huntingdon Manor Hotel is a charming and elegant destination for travelers seeking a comfortable and convenient stay. The hotel is just a short walk from the bustling Inner Harbour and many of Victoria's top attractions, including the Royal BC Museum and the Parliament Buildings.",
       },
       geometry: {
         coordinates: [-123.37483094673297, 48.42198487255217],
@@ -249,9 +272,9 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       properties: {
         img_src: "10_david_foster.JPG",
         img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        title: "Great Blue Heron",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          'The Great Blue Heron is an impressive bird that can be found in North America. It is the largest Heron in the continent, boasting a wingspan that can reach over 2 meters. These birds are quite tall, with a long neck and a beautiful blue-grey plumage. When in flight, they tuck their long necks into a tight "S" shape, which helps them achieve a more streamlined and efficient flight. Great Blue Herons are known for their patience and can often be observed standing completely still for hours as they scan the water for fish, waiting for the perfect opportunity to catch their prey.',
       },
       geometry: {
         coordinates: [-123.37515462637131, 48.42271733614703],
@@ -262,10 +285,11 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       type: "Feature",
       properties: {
         img_src: "11_david_foster.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        img_alt:
+          "ocean view of david foster path with a bench to sit on and view of the inner harbour",
+        title: "David Foster Path",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "The David Foster Path is a scenic walkway that offers breathtaking views of Victoria's inner harbor. The path is lined with benches, providing a perfect spot to sit and enjoy the ocean view. It's a great place to take a stroll or go for a jog, and it's also a popular spot for birdwatching. Don't miss the opportunity to experience the natural beauty of Victoria on the David Foster Path!",
       },
       geometry: {
         coordinates: [-123.37522986934854, 48.422873278983246],
@@ -276,10 +300,11 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       type: "Feature",
       properties: {
         img_src: "12_david_foster.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        img_alt:
+          "david foster path looking into the inner harbour and at the delta hotel. A zodiac whale watching boat drives by",
+        title: "Ocean Views",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "The David Foster Path is a beautiful waterfront trail in Victoria, offering stunning views of the inner harbour and the Delta hotel. Visitors can enjoy a leisurely walk along the path, taking in the sights and sounds of the ocean.",
       },
       geometry: {
         coordinates: [-123.37561032338513, 48.423032874867914],
@@ -290,10 +315,10 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       type: "Feature",
       properties: {
         img_src: "13_david_foster.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
-        description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+        img_alt:
+          "A stunning view of the empress hotel and the boats in the inner harbour from the david foster path",
+        title: "Empress Hotel",
+        description: "",
       },
       geometry: {
         coordinates: [-123.37580818083588, 48.42381558880467],
@@ -304,10 +329,10 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       type: "Feature",
       properties: {
         img_src: "14_david_foster.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        img_alt: "A sea plane and a water taxi cross path in the inner harbour",
+        title: "Sea Plane & Water Taxi",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "Experience the thrill of exploring Victoria's stunning inner harbour by sea plane or water taxi. You might just catch a glimpse of both on your adventure! As you cross paths with these vessels, take in the beautiful scenery that surrounds you. The lush greenery, sparkling water, and bustling harbour make for a memorable sightseeing experience.",
       },
       geometry: {
         coordinates: [-123.37578832977081, 48.42389534720641],
@@ -318,10 +343,11 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       type: "Feature",
       properties: {
         img_src: "15_david_foster.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        img_alt:
+          "An expensive-looking yacht leaving the Victoria inner harbour",
+        title: "Boats in the Inner Harbour",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "Victoria's inner harbour is a hub of maritime activity, with boats of all shapes and sizes coming and going throughout the day. From luxury yachts to charming sailboats, there's always something interesting to see on the water. With its picturesque setting and lively atmosphere, the inner harbour is a \"must-sea\" for any visitor to Victoria.",
       },
       geometry: {
         coordinates: [-123.3773858158236, 48.42422836408136],
@@ -332,10 +358,11 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       type: "Feature",
       properties: {
         img_src: "16_david_foster.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        img_alt:
+          "Charming red brick buildings along David Foster Path with ponds outside of the building",
+        title: "Local Living",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "David Foster Path is a great place to experience local living in Victoria. The path winds its way past charming red brick buildings that house local shops, restaurants, and cafes. Take a break from your walk and sit by one of the ponds outside of the buildings, enjoying the tranquil surroundings. This is a great spot to people-watch and soak up the local atmosphere.",
       },
       geometry: {
         coordinates: [-123.3791967620214, 48.42242536857549],
@@ -346,10 +373,11 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       type: "Feature",
       properties: {
         img_src: "18_fishermans_wharf.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        img_alt:
+          "colorful houses on the shore side of fishermans wharf with people enjoying the sun",
+        title: "Colorful Houses",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "Fisherman's Wharf is a must-visit spot in Victoria. The wharf is lined with brightly colored houses, providing a beautiful backdrop for a relaxing day by the water.",
       },
       geometry: {
         coordinates: [-123.38075184627816, 48.42281381103322],
@@ -360,10 +388,10 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       type: "Feature",
       properties: {
         img_src: "19_fishermans_wharf.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        img_alt: "view of fishermans wharf from david foster path",
+        title: "Fishermans Wharf",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "The colorful floating houses and the local fishing boats make for a unique and memorable experience. Don't forget to try the fresh seafood at one of the many restaurants in the area.",
       },
       geometry: {
         coordinates: [-123.38087780117186, 48.42262757205066],
@@ -374,10 +402,11 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       type: "Feature",
       properties: {
         img_src: "20_fishermans_wharf.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        img_alt:
+          "man enjoys the sun sitting on the dock outside of a green colorful house in Fishermans Wharf",
+        title: "Fishermans Wharf",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "Sit on one of the docks, enjoy the sun, and soak in the local atmosphere.",
       },
       geometry: {
         coordinates: [-123.38109214615795, 48.422623172691374],
@@ -388,10 +417,11 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       type: "Feature",
       properties: {
         img_src: "22_fishermans_wharf.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        img_alt:
+          "a person gets kayaks ready for rental on the docks of Fishermans Wharf as a woman enjoys her ice cream in the sun",
+        title: "Kayak Rentals",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "With the sun shining and ice cream in hand, take in the beautiful scenery and paddle around the colorful floating homes. The rental process is easy, and the staff is always willing to help. Don't miss out on this unique experience!",
       },
       geometry: {
         coordinates: [-123.3818783896226, 48.422520817017784],
@@ -402,10 +432,10 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       type: "Feature",
       properties: {
         img_src: "23_fishermans_wharf.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        img_alt: "a beautiful glass building beside Fishermans Wharf",
+        title: "Local Architecture",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "Victoria is known for its impressive architecture, and this beautiful glass building near Fishermans Wharf is no exception. Take a stroll around the area and admire the unique buildings and structures that make up the city's skyline. With its modern design and prime waterfront location, this building is a must-see for any architecture enthusiast!",
       },
       geometry: {
         coordinates: [-123.38187508146078, 48.4225071360018],
@@ -416,10 +446,10 @@ export const downtown_scenic_walk_photos: GeoPhotos = {
       type: "Feature",
       properties: {
         img_src: "24_fishermans_wharf.JPG",
-        img_alt: "1_harbour.JPG",
-        title: "Victoria Harbour Parliment Building",
+        img_alt: "mexican seafood stand on fishermans wharf",
+        title: "Mexican Seasfood",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, qui sequi eos corrupti asperiores iusto eveniet, vel saepe fuga odit minima, ipsum consectetur laboriosam? Suscipit aliquam numquam tempore labore modi.",
+          "Looking for some delicious Mexican seafood? Look no further than this restaurant located in the heart of Victoria. With fresh, flavorful dishes made using traditional techniques and local ingredients, it's the perfect spot for lunch or dinner. Don't miss their famous fish tacos or ceviche, and be sure to wash it all down with a refreshing margarita or cold beer.",
       },
       geometry: {
         coordinates: [-123.38281438825483, 48.42275058785444],

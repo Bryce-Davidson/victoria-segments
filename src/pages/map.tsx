@@ -66,7 +66,6 @@ const DowntownWalk: NextPage = () => {
         }}
         style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
-        interactiveLayerIds={[walk_layer_style.id]}
         mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
       >
         <Source id="my-data" type="geojson" data={downtown_scenic_walk_route}>
