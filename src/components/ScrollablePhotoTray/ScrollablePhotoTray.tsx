@@ -3,6 +3,7 @@ import { downtown_scenic_walk_photos } from "../../data/downtown_scenic_walk";
 import { useState } from "react";
 import classNames from "../../lib/classNames";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 function ScrollblePhotoTray({
   onClickPhoto,
@@ -24,7 +25,14 @@ function ScrollblePhotoTray({
           setOpen(!open);
         }}
       >
-        {open ? <ExpandMoreIcon fontSize="medium" /> : "Photos"}
+        {open ? (
+          <ExpandMoreIcon fontSize="medium" />
+        ) : (
+          <div className="flex items-center justify-center gap-2">
+            <p>Photos</p>
+            <KeyboardArrowUpIcon fontSize="medium" />
+          </div>
+        )}
       </button>
 
       <div

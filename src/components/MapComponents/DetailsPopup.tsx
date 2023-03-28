@@ -27,13 +27,13 @@ export default function DetailsPopup({
       longitude={Number(popupInfo.geometry.coordinates[0])}
       latitude={Number(popupInfo.geometry.coordinates[1])}
       maxWidth="1000px"
-      className="rounded-md"
+      className="z-20 rounded-md"
       onClose={() => setPopupInfo(null)}
     >
       <div className="w-[20rem]">
         <div className="rounded-md">
           <Image
-            className="max-h-32 w-full object-cover sm:max-h-52 sm:object-contain"
+            className="max-h-42 w-full object-cover sm:max-h-52 sm:object-contain"
             alt={popupInfo.properties.img_alt}
             width={500}
             height={250}
@@ -42,7 +42,7 @@ export default function DetailsPopup({
           />
         </div>
         <div>
-          <div className="my-4">
+          <div className="my-1 sm:my-4">
             <h2 className="text-xl">{popupInfo.properties.title}</h2>
             <p>
               {popupInfo.properties.description
