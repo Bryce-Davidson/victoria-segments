@@ -35,8 +35,8 @@ export default function DetailsPopup({
           <Image
             className="max-h-42 w-full object-cover sm:max-h-52 sm:object-contain"
             alt={popupInfo.properties.img_alt}
-            width={500}
-            height={250}
+            width={500 / 2}
+            height={250 / 2}
             src={"/photos/" + popupInfo.properties.img_src}
             loading="eager"
           />
