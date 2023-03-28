@@ -8,8 +8,8 @@ export default function InteractiveMapButton({ href }: { href: string }) {
       className="absolute bottom-8
   left-1/2 flex -translate-x-1/2 items-center gap-4 rounded-md bg-white py-3 px-6"
     >
-      <h4>Interactive Map</h4>
-      <ZoomOutMapIcon />
+      <h4 className="order-2 text-center">Interactive Map</h4>
+      <ZoomOutMapIcon className="order-1" />
     </Link>
   );
 }
