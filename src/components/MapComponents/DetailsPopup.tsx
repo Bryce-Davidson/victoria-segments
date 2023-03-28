@@ -39,6 +39,7 @@ export default function DetailsPopup({
             height={250 / 2}
             src={"/photos/" + popupInfo.properties.img_src}
             loading="eager"
+            priority
           />
         </div>
         <div>
