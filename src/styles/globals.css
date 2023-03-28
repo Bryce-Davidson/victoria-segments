@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  /* outline: #4caf50 solid 1px; */
-}
+/* * { */
+/* outline: #4caf50 solid 1px; */
+/* } */
 html,
 body {
   overscroll-behavior: none;
