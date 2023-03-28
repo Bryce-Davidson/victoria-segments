@@ -61,8 +61,8 @@ const Home: NextPage = () => {
         ></Image>
       </section>
       <section id="segment-statistics">
-        <div className="contain mx-auto my-10 flex w-full justify-center  gap-4 bg-cyan-100 bg-opacity-80 p-5 text-lg font-medium mix-blend-screen shadow-xl sm:p-10">
-          <div className="gap- flex items-center justify-center">
+        <div className="contain mx-auto my-10 flex w-full justify-center gap-4 bg-cyan-100 bg-opacity-80 p-5 text-lg font-medium mix-blend-screen shadow-xl sm:p-10">
+          <div className="flex items-center justify-center">
             <AlarmAddRoundedIcon />
             <p className="ml-1">1h</p>
           </div>
