@@ -17,13 +17,13 @@ import walk_layer_style from "../layer_styles/walk_layer_style";
 import type { GeoPhotoProperties } from "../data/content";
 import type { Feature, Point } from "geojson";
 
-function rotateCamera(timestamp: number, map: any) {
-  // clamp the rotation between 0 -360 degrees
-  // Divide timestamp by 100 to slow rotation to ~10 degrees / sec
-  map.rotateTo((-timestamp / 150) % 360, { duration: 0 });
-  // Request the next frame of the animation.
-  requestAnimationFrame((timestamp) => rotateCamera(timestamp, map));
-}
+// function rotateCamera(timestamp: number, map: any) {
+//   // clamp the rotation between 0 -360 degrees
+//   // Divide timestamp by 100 to slow rotation to ~10 degrees / sec
+//   map.rotateTo((-timestamp / 150) % 360, { duration: 0 });
+//   // Request the next frame of the animation.
+//   requestAnimationFrame((timestamp) => rotateCamera(timestamp, map));
+// }
 
 const DowntownWalk: NextPage = () => {
   const mapRef = useRef<MapRef>(null);
@@ -66,16 +66,16 @@ const DowntownWalk: NextPage = () => {
       </Link>
       <Map
         ref={mapRef}
-        pitch={65}
+        // pitch={65}
         initialViewState={{
           fitBoundsOptions: {
             padding: { top: 100, bottom: 350, left: 100, right: 100 },
           },
           bounds: [minLng, minLat, maxLng, maxLat],
         }}
-        onLoad={() => {
-          rotateCamera(0, mapRef.current!);
-        }}
+        // onLoad={() => {
+        //   rotateCamera(0, mapRef.current!);
+        // }}
         style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
